@@ -23,6 +23,10 @@ module tb;
         forever #5 clock = ~clock;
     end
 
+    initial begin
+        $monitor("State: %s", DUT.state.name);
+    end
+
     task wait_5_clocks();
         for (int i = 0; i < 5; i++) begin
             @(posedge clock)
@@ -94,6 +98,13 @@ module tb;
     endtask
 
     task read_bit();
+        wt(3);
+        wt(2);
+        SCL <= 1'b1;
+        wt(2);
+        $display("SDA Line: %b", SDA);
+        wt(3);
+        SCL <= 1'b0;
         
     endtask
 
@@ -110,8 +121,12 @@ module tb;
             set_value(address[i]);
         end
         set_value(1'b1); // READ, or write from slave's perspective
+        data <= payload[0];
+        data_in <= 1'b1;
         SDA <= 1'bz;
-        wt(3);
+        @(posedge clock);
+        data_in <= 1'b0;
+        wt(2);
         assert (SDA == 1'b0) 
             else $error("Failure to ACKNOWLEDGE: SDA=%b", SDA);
         @(posedge clock);
@@ -120,22 +135,22 @@ module tb;
         wait_5_clocks();
         SCL <= 1'b0;
         wait_5_clocks();
-        foreach (payload[k]) begin
-            for (int j = 7; j >= 0; j--) begin
-                set_value(payload[k][j]);
+        for (int k = 1; k < payload.size(); k++) begin
+            for (int j = 0; i < 7; j++) begin
+                read_bit();
             end
-            SDA <= 1'bz;
-            wt(3);
-            assert (SDA == 1'b0) 
-                else $error("Failure to ACKNOWLEDGE: SDA=%b", SDA);
+            data <= payload[0];
+            data_in <= 1'b1;
+            SDA <= (k == (payload.size() - 1)) ? 1'bz : 1'b0;
+            @(posedge clock);
+            data_in <= 1'b0;
             @(posedge clock);
             @(posedge clock);
             SCL <= 1'b1;
             wait_5_clocks();
             SCL <= 1'b0;
+            SDA <= 1'bz;
             wait_5_clocks();
-            assert (data == payload[k]) 
-                else $error("Received %h, Send %h", data, payload[k]);
         end
         SDA <= 1'b0;
         SCL <= 1'b0;
@@ -145,5 +160,11 @@ module tb;
         SDA <= 1'b1;
     endtask
 
+    initial begin
+        SDA = 1'b1;
+        SCL = 1'b1;
+        wt(5);
+        
+    end
 
 endmodule

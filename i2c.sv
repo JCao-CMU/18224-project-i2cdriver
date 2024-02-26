@@ -211,8 +211,7 @@ module I2C_slave (
 
     enum logic [3:0] {IDLE, ADDR_RD, WAIT_END, 
                       READ, READ_ACK, READ_PRELD, READ_LOAD, 
-                      WRITE, WRITE_ACK, WRITE_PRELD, WRITE_SEND, WRITE_RELEASE, 
-                      WRITE_CHECK_ACK} 
+                      WRITE, WRITE_ACK, WRITE_PRELD, WRITE_SEND, WRITE_RELEASE} 
                       state, nextstate;
 
     always_comb begin : main_FSM
@@ -323,6 +322,8 @@ module I2C_slave (
             end
             WRITE_ACK: begin
                 if (scl_fall) begin
+                    piso_spit = 1'b1;
+                    wr_up = 1'b1;
                     nextstate = WRITE_PRELD;
                 end else begin
                     ack = 1'b1;
@@ -330,7 +331,7 @@ module I2C_slave (
                 end
             end
             WRITE_PRELD: begin
-                if (scl_rise) begin
+                if (scl_fall) begin
                     piso_spit = 1'b1;
                     wr_up = 1'b1;
                     nextstate = WRITE_SEND;
@@ -339,7 +340,7 @@ module I2C_slave (
                 end
             end
             WRITE_SEND: begin
-                if (scl_rise && ~piso_empty) begin
+                if (scl_fall && ~piso_empty) begin
                     piso_spit = 1'b1;
                     wr_up = 1'b1;
                     nextstate = WRITE_SEND;
@@ -352,19 +353,14 @@ module I2C_slave (
                 end
             end
             WRITE_RELEASE: begin // this state releases the SDA line
-                if (scl_rise) begin
-                    nextstate = WRITE_CHECK_ACK;
+                if (scl_rise && sda_low) begin
+                    nextstate = WRITE_PRELD;
+                end
+                else if (scl_rise && sda_high) begin
+                    nextstate = IDLE;
                 end
                 else begin
                     nextstate = WRITE_RELEASE;
-                end
-            end
-            WRITE_CHECK_ACK: begin // This is a short check on master's ACK
-                if (sda_low) begin // ACKED
-                    nextstate = WRITE_PRELD;
-                end
-                else begin // NACKED
-                    nextstate = IDLE; // Communication end. no need to check STOP
                 end
             end
 
