@@ -5,7 +5,7 @@ module I2C_slave (
     input logic clock, reset, 
 
     // interface with I2C
-    inout tri SDA, 
+    inout tri1 SDA, 
     input logic SCL, // We are fast enough, no need to do clock stretching
 
     // interface with downstream thread
