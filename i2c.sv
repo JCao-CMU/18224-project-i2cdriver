@@ -5,13 +5,16 @@ module I2C_slave (
     input logic clock, reset, 
 
     // interface with I2C
-    inout tri1 SDA, 
-    input logic SCL, // We are fast enough, no need to do clock stretching
+    input  logic SDA_in, 
+    output logic SDA_out,
+    input  logic SCL, // We are fast enough, no need to do clock stretching
+    output logic wr_up,
 
     // interface with downstream thread
-    inout tri [7:0] data, 
-    output logic writeOK, 
-    input logic data_in
+    input  logic [7:0] data_out, 
+    output logic [7:0] data_out,
+    output logic writeOK, wr_down,
+    input  logic data_in
 );
 
     parameter I2C_ADDRESS = 7'h49;
@@ -71,7 +74,7 @@ module I2C_slave (
         sda_low  = 1'b0;
         case (sda_state)
             SDA0: begin
-                if (SDA) begin
+                if (SDA_in) begin
                     sda_rise = 1'b1;
                     sda_high = 1'b1;
                     sda_nextstate = SDA1;
@@ -82,7 +85,7 @@ module I2C_slave (
                 end
             end
             SDA1: begin
-                if (~SDA) begin
+                if (~SDA_in) begin
                     sda_fall = 1'b1;
                     sda_low = 1'b1;
                     sda_nextstate = SDA0;
@@ -172,7 +175,7 @@ module I2C_slave (
     logic sipo_load, sipo_full, sipo_clear;
     logic [7:0] sipo_out;
 
-    SIPO the_sipo (.clock, .reset, .data_in(SDA), .clear(sipo_clear), 
+    SIPO the_sipo (.clock, .reset, .data_in(SDA_in), .clear(sipo_clear), 
                    .load(sipo_load), .out(sipo_out), .full(sipo_full));
 
     logic store;
@@ -197,9 +200,7 @@ module I2C_slave (
 
     logic ack, wr_up, wr_down;
 
-    assign SDA = ack ? 1'b0 : (wr_up ? piso_out : 1'bz);
-
-    assign data = wr_down ? register_out : 8'bz;
+    assign SDA_out = ack ? 1'b0 : piso_out;
 
     assign writeOK = ~wr_down & empty;
 
