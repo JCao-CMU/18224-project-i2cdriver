@@ -4,13 +4,17 @@ module tb;
     logic clock, reset;
 
     // interface with I2C
-    tri1 SDA;
+    logic SDA_in;
+    logic SDA_out;
     logic SCL;// We are fast enough, no need to do clock stretching
+    logic wr_up;
 
     // interface with downstream thread
-    tri [7:0] data;
+    logic [7:0] data_in, 
+    logic [7:0] data_out,
     logic writeOK;
     logic data_in;
+    logic wr_down;
 
     parameter i2c_slave_addr = 7'h49;
 
@@ -41,7 +45,7 @@ module tb;
 
     task set_value(input logic in); // set value 2 clock before;
         wt(3);
-        SDA <= in;
+        SDA_in <= in;
         wt(2);
         SCL <= 1'b1;
         wait_5_clocks();
@@ -50,10 +54,10 @@ module tb;
     endtask
 
     task send_bytes (input logic [6:0] address, input logic [7:0] payload []);
-        SDA = 1'b1;
+        SDA_in = 1'b1;
         SCL = 1'b1;
         @(posedge clock)
-        SDA <= 1'b0;
+        SDA_in <= 1'b0;
         @(posedge clock)
         SCL <= 1'b0;
         @(posedge clock);
@@ -62,9 +66,9 @@ module tb;
             set_value(address[i]);
         end
         set_value(1'b0); // WRITE, so read from slave's perspective
-        SDA <= 1'bz;
+        SDA_in <= 1'bz;
         wt(3);
-        assert (SDA == 1'b0) 
+        assert (SDA_out == 1'b0) 
             else $error("Failure to ACKNOWLEDGE: SDA=%b", SDA);
         @(posedge clock);
         @(posedge clock);

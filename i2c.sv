@@ -11,7 +11,7 @@ module I2C_slave (
     output logic wr_up,
 
     // interface with downstream thread
-    input  logic [7:0] data_out, 
+    input  logic [7:0] data_in, 
     output logic [7:0] data_out,
     output logic writeOK, wr_down,
     input  logic data_in
@@ -187,7 +187,7 @@ module I2C_slave (
     logic piso_load, piso_spit, piso_empty;
     logic piso_out;
 
-    PISO the_piso (.clock, .reset, .data_in(data), .spit(piso_spit), 
+    PISO the_piso (.clock, .reset, .data_in(data_in), .spit(piso_spit), 
                    .load(piso_load), .out(piso_out), .empty(piso_empty));
 
     logic is_correct_address;
@@ -205,6 +205,8 @@ module I2C_slave (
     assign writeOK = ~wr_down & empty;
 
     assign piso_load = ~wr_down & data_in & empty;
+
+    assign data_out = register_out;
     
     // ====================================================
     // =============== The Main Control FSM ===============
