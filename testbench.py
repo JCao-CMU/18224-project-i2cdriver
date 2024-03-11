@@ -40,6 +40,14 @@ async def send_data(address, array):
     for i in hex_to_binarray(address):
         send_bit(i)
     send_bit(0)
+    wt(3)
+    dut.SDA_in.value = 1
+    wt(1)
+    assert(dut.ack.value == 1)
+    wt(1)
+    dut.SCL.value = 1
+    wt(5)
+    dut.SCL.value = 0
     #! RELEASE_WIRE, wait, and assert SDA_out is low and wr_up is high
     wt(2)
     dut.SCL.value = 1
@@ -48,6 +56,15 @@ async def send_data(address, array):
     for subarray in array:
         for element in subarray:
             send_bit(element)
+        wt(3)
+        dut.SDA_in.value = 1
+
+        wt(1)
+        assert(dut.ack.value == 1)
+        wt(1)
+        dut.SCL.value = 1
+        wt(5)
+        dut.SCL.value = 0
         #! RELEASE_WIRE, wait, and assert SDA_out is low and wr_up is high
         wt(2)
         dut.SCL.value = 1
@@ -85,7 +102,14 @@ async def recv_data(address, array):
         send_bit(i)
     send_bit(0)
     #! RELEASE_WIRE, wait, and assert SDA_out is low and wr_up is high
-
+    wt(3)
+    dut.SDA_in.value = 1
+    wt(1)
+    assert(dut.ack.value == 1)
+    wt(1)
+    dut.SCL.value = 1
+    wt(5)
+    dut.SCL.value = 0
     # todo: put thing in array.
     for i in range(len(array)):
         received_bit = []
@@ -95,7 +119,7 @@ async def recv_data(address, array):
         wt(5)
         dut.SCL.value = 0
         for i in range(8):
-            bit = send_bit(element)
+            bit = read_bit(element)
             received_bit.append(bit)
         #! DUT Releases wire, wait, and assert SDA_out is low and wr_up is high
         if (i == len(array)-1):
@@ -107,6 +131,7 @@ async def recv_data(address, array):
         wt(5)
         dut.SCL.value = 0
         wt(2)
+        dut.SDA_in.value = 1
         payload = int("".join(str(x) for x in received_bit), 2)
         assert(array[i] == payload)
     dut.SCL.value = 0
