@@ -13,8 +13,9 @@ module I2C_slave (
     // interface with downstream thread
     input  logic [7:0] data_in, 
     output logic [7:0] data_out,
-    output logic writeOK, wr_down,
-    input  logic data_in
+    output logic writeOK, wr_down
+    
+    ,input  logic data_incoming
 );
 
     parameter I2C_ADDRESS = 7'h49;
@@ -95,7 +96,7 @@ module I2C_slave (
                     sda_nextstate = SDA1;
                 end
             end
-            default: sda_nextstate = SCL0;
+            default: sda_nextstate = SDA0;
         endcase
     end
 
@@ -198,13 +199,13 @@ module I2C_slave (
 
     assign r1w0 = sipo_out[0];
 
-    logic ack, wr_up, wr_down;
+    logic ack;
 
     assign SDA_out = ack ? 1'b0 : piso_out;
 
-    assign writeOK = ~wr_down & empty;
+    assign writeOK = ~wr_down & piso_empty;
 
-    assign piso_load = ~wr_down & data_in & empty;
+    assign piso_load = ~wr_down & data_incoming & piso_empty;
 
     assign data_out = register_out;
     
@@ -238,6 +239,7 @@ module I2C_slave (
             ADDR_RD: begin
                 if (scl_rise && ~sipo_full) begin
                     sipo_load = 1'b1;
+                    nextstate = ADDR_RD;
                 end
                 else if (sipo_full && ~is_correct_address) begin 
                     // we remove scl_rise here since when sipo is full and scl rise, 
@@ -301,7 +303,7 @@ module I2C_slave (
                     sipo_load = 1'b1;
                     nextstate = READ_LOAD;
                 end
-                else if (scl_fall && ~sipo_full) begin
+                else if (scl_fall && sipo_full) begin
                     ack = 1'b1;
                     store = 1'b1;
                     nextstate = READ_ACK; 
@@ -310,6 +312,9 @@ module I2C_slave (
                 else if (sda_rise && scl_high) begin
                     // sda change value during scl_low. if sda_rise and scl_high
                     nextstate = IDLE;
+                end
+                else begin
+                    nextstate = READ_LOAD;
                 end
             end
 
@@ -352,6 +357,7 @@ module I2C_slave (
                     nextstate = WRITE_RELEASE;
                 end
                 else begin
+                    nextstate = WRITE_SEND;
                     wr_up = 1'b1; // we need to hold this line. 
                 end
             end
@@ -373,7 +379,7 @@ module I2C_slave (
 
     always_ff @(posedge clock, posedge reset) begin
         if (reset)
-            state = IDLE;
+            state <= IDLE;
         else
             state <= nextstate;
     end
