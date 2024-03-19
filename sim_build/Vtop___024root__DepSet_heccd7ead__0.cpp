@@ -22,14 +22,13 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     // Body
     vlSelf->I2C_slave__DOT__SCL = vlSelf->SCL;
     vlSelf->I2C_slave__DOT__data_incoming = vlSelf->data_incoming;
+    vlSelf->I2C_slave__DOT__piso_out = vlSelf->I2C_slave__DOT__the_piso__DOT__out;
     vlSelf->I2C_slave__DOT__SDA_in = vlSelf->SDA_in;
     vlSelf->I2C_slave__DOT__data_in = vlSelf->data_in;
     vlSelf->I2C_slave__DOT__sipo_out = vlSelf->I2C_slave__DOT__the_sipo__DOT__out;
     vlSelf->data_out = vlSelf->I2C_slave__DOT__the_reg__DOT__out;
     vlSelf->I2C_slave__DOT__clock = vlSelf->clock;
     vlSelf->I2C_slave__DOT__reset = vlSelf->reset;
-    vlSelf->I2C_slave__DOT__piso_out = (1U & ((IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__register) 
-                                              >> 7U));
     vlSelf->I2C_slave__DOT__is_correct_address = (0x49U 
                                                   == 
                                                   (0x7fU 
@@ -75,7 +74,6 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->I2C_slave__DOT__the_sipo__DOT__reset = vlSelf->I2C_slave__DOT__reset;
     vlSelf->I2C_slave__DOT__the_reg__DOT__reset = vlSelf->I2C_slave__DOT__reset;
     vlSelf->I2C_slave__DOT__the_piso__DOT__reset = vlSelf->I2C_slave__DOT__reset;
-    vlSelf->I2C_slave__DOT__the_piso__DOT__out = vlSelf->I2C_slave__DOT__piso_out;
     if ((1U & (~ ((IData)(vlSelf->I2C_slave__DOT__state) 
                   >> 3U)))) {
         if ((4U & (IData)(vlSelf->I2C_slave__DOT__state))) {
@@ -333,7 +331,7 @@ VL_INLINE_OPT void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf) 
     }
     vlSelf->I2C_slave__DOT__the_reg__DOT__enable = vlSelf->I2C_slave__DOT__store;
     vlSelf->SDA_out = ((~ (IData)(vlSelf->I2C_slave__DOT__ack)) 
-                       & (IData)(vlSelf->I2C_slave__DOT__piso_out));
+                       & (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__out));
     vlSelf->I2C_slave__DOT__sipo_clear = 0U;
     if ((1U & (~ ((IData)(vlSelf->I2C_slave__DOT__state) 
                   >> 3U)))) {
@@ -417,30 +415,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     __Vdly__I2C_slave__DOT__the_sipo__DOT__out = vlSelf->I2C_slave__DOT__the_sipo__DOT__out;
     __Vdly__I2C_slave__DOT__the_sipo__DOT__counter 
         = vlSelf->I2C_slave__DOT__the_sipo__DOT__counter;
-    if (vlSelf->reset) {
-        __Vdly__I2C_slave__DOT__the_piso__DOT__register = 0U;
-        __Vdly__I2C_slave__DOT__the_piso__DOT__counter = 0U;
-        vlSelf->I2C_slave__DOT__the_reg__DOT__out = 0U;
-        vlSelf->I2C_slave__DOT__state = 0U;
-    } else {
-        if (vlSelf->I2C_slave__DOT__piso_load) {
-            __Vdly__I2C_slave__DOT__the_piso__DOT__register 
-                = vlSelf->data_in;
-            __Vdly__I2C_slave__DOT__the_piso__DOT__counter = 0U;
-        } else if (((IData)(vlSelf->I2C_slave__DOT__piso_spit) 
-                    & (8U != (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__counter)))) {
-            __Vdly__I2C_slave__DOT__the_piso__DOT__register 
-                = (0xfeU & ((IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__register) 
-                            << 1U));
-            __Vdly__I2C_slave__DOT__the_piso__DOT__counter 
-                = (0xfU & ((IData)(1U) + (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__counter)));
-        }
-        if (vlSelf->I2C_slave__DOT__store) {
-            vlSelf->I2C_slave__DOT__the_reg__DOT__out 
-                = vlSelf->I2C_slave__DOT__sipo_out;
-        }
-        vlSelf->I2C_slave__DOT__state = vlSelf->I2C_slave__DOT__nextstate;
-    }
     if (((IData)(vlSelf->reset) | (IData)(vlSelf->I2C_slave__DOT__sipo_clear))) {
         __Vdly__I2C_slave__DOT__the_sipo__DOT__out = 0U;
         __Vdly__I2C_slave__DOT__the_sipo__DOT__counter = 0U;
@@ -452,6 +426,35 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         __Vdly__I2C_slave__DOT__the_sipo__DOT__counter 
             = (0xfU & ((IData)(1U) + (IData)(vlSelf->I2C_slave__DOT__the_sipo__DOT__counter)));
     }
+    if (vlSelf->reset) {
+        vlSelf->I2C_slave__DOT__the_reg__DOT__out = 0U;
+        __Vdly__I2C_slave__DOT__the_piso__DOT__register = 0U;
+        __Vdly__I2C_slave__DOT__the_piso__DOT__counter = 8U;
+        vlSelf->I2C_slave__DOT__the_piso__DOT__out = 0U;
+        vlSelf->I2C_slave__DOT__state = 0U;
+    } else {
+        if (vlSelf->I2C_slave__DOT__store) {
+            vlSelf->I2C_slave__DOT__the_reg__DOT__out 
+                = vlSelf->I2C_slave__DOT__sipo_out;
+        }
+        if (vlSelf->I2C_slave__DOT__piso_load) {
+            __Vdly__I2C_slave__DOT__the_piso__DOT__register 
+                = vlSelf->data_in;
+            __Vdly__I2C_slave__DOT__the_piso__DOT__counter = 0U;
+            vlSelf->I2C_slave__DOT__the_piso__DOT__out = 0U;
+        } else if (((IData)(vlSelf->I2C_slave__DOT__piso_spit) 
+                    & (8U != (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__counter)))) {
+            __Vdly__I2C_slave__DOT__the_piso__DOT__register 
+                = (0xfeU & ((IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__register) 
+                            << 1U));
+            __Vdly__I2C_slave__DOT__the_piso__DOT__counter 
+                = (0xfU & ((IData)(1U) + (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__counter)));
+            vlSelf->I2C_slave__DOT__the_piso__DOT__out 
+                = (1U & ((IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__register) 
+                         >> 7U));
+        }
+        vlSelf->I2C_slave__DOT__state = vlSelf->I2C_slave__DOT__nextstate;
+    }
     vlSelf->I2C_slave__DOT__stop_state = ((1U & (~ (IData)(vlSelf->reset))) 
                                           && (IData)(vlSelf->I2C_slave__DOT__stop_nextstate));
     vlSelf->I2C_slave__DOT__start_state = ((1U & (~ (IData)(vlSelf->reset))) 
@@ -460,16 +463,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
                                          || (IData)(vlSelf->I2C_slave__DOT__sda_nextstate));
     vlSelf->I2C_slave__DOT__scl_state = ((IData)(vlSelf->reset) 
                                          || (IData)(vlSelf->I2C_slave__DOT__scl_nextstate));
+    vlSelf->I2C_slave__DOT__the_sipo__DOT__out = __Vdly__I2C_slave__DOT__the_sipo__DOT__out;
+    vlSelf->I2C_slave__DOT__the_sipo__DOT__counter 
+        = __Vdly__I2C_slave__DOT__the_sipo__DOT__counter;
     vlSelf->I2C_slave__DOT__the_piso__DOT__register 
         = __Vdly__I2C_slave__DOT__the_piso__DOT__register;
     vlSelf->I2C_slave__DOT__the_piso__DOT__counter 
         = __Vdly__I2C_slave__DOT__the_piso__DOT__counter;
-    vlSelf->I2C_slave__DOT__the_sipo__DOT__out = __Vdly__I2C_slave__DOT__the_sipo__DOT__out;
-    vlSelf->I2C_slave__DOT__the_sipo__DOT__counter 
-        = __Vdly__I2C_slave__DOT__the_sipo__DOT__counter;
-    vlSelf->I2C_slave__DOT__piso_out = (1U & ((IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__register) 
-                                              >> 7U));
-    vlSelf->I2C_slave__DOT__piso_empty = (8U == (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__counter));
     vlSelf->I2C_slave__DOT__sipo_out = vlSelf->I2C_slave__DOT__the_sipo__DOT__out;
     vlSelf->I2C_slave__DOT__is_correct_address = (0x49U 
                                                   == 
@@ -479,6 +479,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     vlSelf->I2C_slave__DOT__r1w0 = (1U & (IData)(vlSelf->I2C_slave__DOT__the_sipo__DOT__out));
     vlSelf->I2C_slave__DOT__sipo_full = (8U == (IData)(vlSelf->I2C_slave__DOT__the_sipo__DOT__counter));
     vlSelf->data_out = vlSelf->I2C_slave__DOT__the_reg__DOT__out;
+    vlSelf->I2C_slave__DOT__piso_out = vlSelf->I2C_slave__DOT__the_piso__DOT__out;
+    vlSelf->I2C_slave__DOT__piso_empty = (8U == (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__counter));
     vlSelf->I2C_slave__DOT__wr_down = 0U;
     __Vtableidx2 = (((IData)(vlSelf->SDA_in) << 1U) 
                     | (IData)(vlSelf->I2C_slave__DOT__sda_state));
@@ -503,12 +505,11 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
         [__Vtableidx1];
     vlSelf->I2C_slave__DOT__scl_nextstate = Vtop__ConstPool__TABLE_hb34b0496_0
         [__Vtableidx1];
-    vlSelf->I2C_slave__DOT__the_piso__DOT__out = vlSelf->I2C_slave__DOT__piso_out;
-    vlSelf->I2C_slave__DOT__the_piso__DOT__empty = vlSelf->I2C_slave__DOT__piso_empty;
     vlSelf->I2C_slave__DOT__the_reg__DOT__in = vlSelf->I2C_slave__DOT__sipo_out;
     vlSelf->I2C_slave__DOT__the_sipo__DOT__full = vlSelf->I2C_slave__DOT__sipo_full;
     vlSelf->I2C_slave__DOT__data_out = vlSelf->data_out;
     vlSelf->I2C_slave__DOT__register_out = vlSelf->data_out;
+    vlSelf->I2C_slave__DOT__the_piso__DOT__empty = vlSelf->I2C_slave__DOT__piso_empty;
     if ((1U & (~ ((IData)(vlSelf->I2C_slave__DOT__state) 
                   >> 3U)))) {
         if ((4U & (IData)(vlSelf->I2C_slave__DOT__state))) {
@@ -764,7 +765,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
     }
     vlSelf->I2C_slave__DOT__the_reg__DOT__enable = vlSelf->I2C_slave__DOT__store;
     vlSelf->SDA_out = ((~ (IData)(vlSelf->I2C_slave__DOT__ack)) 
-                       & (IData)(vlSelf->I2C_slave__DOT__piso_out));
+                       & (IData)(vlSelf->I2C_slave__DOT__the_piso__DOT__out));
     vlSelf->I2C_slave__DOT__sipo_clear = 0U;
     if ((1U & (~ ((IData)(vlSelf->I2C_slave__DOT__state) 
                   >> 3U)))) {

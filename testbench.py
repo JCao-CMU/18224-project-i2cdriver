@@ -77,12 +77,13 @@ async def send_data(address, array, dut):
         payload = int("".join(str(x) for x in subarray), 2)
         assert(dut.data_out.value == payload)
     dut.SCL.value = 0
+    dut.SDA_in.value = 0
     await wt(1, dut)
     dut.SCL.value = 1
     await wt(1, dut)
     dut.SDA_in.value = 1
 
-async def read_bit():
+async def read_bit(dut):
     await wt(3, dut)
     await wt(2, dut)
     dut.SCL.value = 1
@@ -103,7 +104,7 @@ async def recv_data(address, array, dut):
     await wt(2, dut)
     for i in hex_to_binarray(address):
         await send_bit(i, dut)
-    await send_bit(0, dut)
+    await send_bit(1, dut)
     #! RELEASE_WIRE, wait, and assert SDA_out is low and wr_up is high
     await wt(3, dut)
     dut.SDA_in.value = 1
@@ -119,10 +120,12 @@ async def recv_data(address, array, dut):
         await wt(2, dut)
         dut.SCL.value = 1
         dut.data_in.value = array[i]
+        dut.data_incoming.value = 1
         await wt(5, dut)
+        dut.data_incoming.value = 0
         dut.SCL.value = 0
-        for i in range(8):
-            bit = await read_bit(element, dut)
+        for j in range(8):
+            bit = await read_bit(dut)
             received_bit.append(bit)
         #! DUT Releases wire, wait, and assert SDA_out is low and wr_up is high
         if (i == len(array)-1):
@@ -136,12 +139,14 @@ async def recv_data(address, array, dut):
         await wt(2, dut)
         dut.SDA_in.value = 1
         payload = int("".join(str(x) for x in received_bit), 2)
+        print(received_bit)
         assert(array[i] == payload)
     dut.SCL.value = 0
+    dut.SDA_in.value = 0
     await wt(1, dut)
     dut.SCL.value = 1
     await wt(1, dut)
-    dut.SDA.value = 1
+    dut.SDA_in.value = 1
 
 def generate_down_packet():
     rand_packet_count = random.randint(PACKNUM_FLOOR, PACKNUM_CEIL+1)
@@ -158,7 +163,7 @@ def generate_up_packet():
     rand_packet_count = random.randint(PACKNUM_FLOOR, PACKNUM_CEIL+1)
     arr = []
     for i in range (rand_packet_count):
-        packet = random.randint(0, 2**8)
+        packet = random.randint(0, 2**8-1)
         arr.append(packet)
     return arr
     

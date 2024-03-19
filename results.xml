@@ -1,8 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1710802165" />
-    <testcase name="basic_test" classname="testbench" file="/home/user/Desktop/18224-project-i2cdriver/testbench.py" lineno="166" time="0.5518076419830322" sim_time_ns="23355.001" ratio_time="42324.53344804919">
-      <failure message="Test failed with RANDOM_SEED=1710802165" />
-    </testcase>
+    <property name="random_seed" value="1710817774" />
+    <testcase name="basic_test" classname="testbench" file="/home/user/Desktop/18224-project-i2cdriver/testbench.py" lineno="171" time="11.625072479248047" sim_time_ns="470505.001" ratio_time="40473.29613126283" />
   </testsuite>
 </testsuites>

@@ -432,21 +432,23 @@ module PISO #(
     logic [SIZE-1:0] register;
 
     assign empty = counter == SIZE;
-    assign out   = register[SIZE-1]; // NOTE here we are sending MSB first
 
     always_ff @(posedge clock, posedge reset) begin
         if (reset) begin
             register <= 'b0;
-            counter <= 'b0;
+            counter <= SIZE;
+            out <= 'd0;
         end
         else begin
             if (load) begin
                 register <= data_in;
                 counter <= 'd0;
+                out <= 'd0;
             end 
             else if (spit && counter != SIZE) begin
                 register <= {register[SIZE-UNIT-1:0], {UNIT{1'b0}}};
                 counter <= counter + 1;
+                out <= register[SIZE-1];
             end
         end
     end
