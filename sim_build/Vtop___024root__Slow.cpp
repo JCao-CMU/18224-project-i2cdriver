@@ -11,8 +11,6 @@ constexpr CData/*6:0*/ Vtop___024root::I2C_slave__DOT__I2C_ADDRESS;
 constexpr IData/*31:0*/ Vtop___024root::I2C_slave__DOT__the_sipo__DOT__SIZE;
 constexpr IData/*31:0*/ Vtop___024root::I2C_slave__DOT__the_sipo__DOT__UNIT;
 constexpr IData/*31:0*/ Vtop___024root::I2C_slave__DOT__the_reg__DOT__SIZE;
-constexpr IData/*31:0*/ Vtop___024root::I2C_slave__DOT__the_piso__DOT__SIZE;
-constexpr IData/*31:0*/ Vtop___024root::I2C_slave__DOT__the_piso__DOT__UNIT;
 
 
 void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf);

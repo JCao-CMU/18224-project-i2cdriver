@@ -47,7 +47,7 @@ VL_ATTR_COLD void Vtop___024root___eval_settle(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
             Vtop___024root___dump_triggers__stl(vlSelf);
 #endif
-            VL_FATAL_MT("/home/user/Desktop/18224-project-i2cdriver/i2c.sv", 3, "", "Settle region did not converge.");
+            VL_FATAL_MT("/home/user/Desktop/18224-project-i2cdriver/i2c.sv", 19, "", "Settle region did not converge.");
         }
         __VstlIterCount = ((IData)(1U) + __VstlIterCount);
         __VstlContinue = 0U;
@@ -127,7 +127,7 @@ VL_ATTR_COLD void Vtop___024root___dump_triggers__act(Vtop___024root* vlSelf) {
         VL_DBG_MSGF("         No triggers active\n");
     }
     if ((1ULL & vlSelf->__VactTriggered.word(0U))) {
-        VL_DBG_MSGF("         'act' region trigger index 0 is active: @(posedge clock or posedge reset)\n");
+        VL_DBG_MSGF("         'act' region trigger index 0 is active: @(posedge clock or negedge reset)\n");
     }
 }
 #endif  // VL_DEBUG
@@ -142,7 +142,7 @@ VL_ATTR_COLD void Vtop___024root___dump_triggers__nba(Vtop___024root* vlSelf) {
         VL_DBG_MSGF("         No triggers active\n");
     }
     if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
-        VL_DBG_MSGF("         'nba' region trigger index 0 is active: @(posedge clock or posedge reset)\n");
+        VL_DBG_MSGF("         'nba' region trigger index 0 is active: @(posedge clock or negedge reset)\n");
     }
 }
 #endif  // VL_DEBUG
@@ -228,7 +228,9 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->I2C_slave__DOT__the_piso__DOT__out = VL_RAND_RESET_I(1);
     vlSelf->I2C_slave__DOT__the_piso__DOT__empty = VL_RAND_RESET_I(1);
     vlSelf->I2C_slave__DOT__the_piso__DOT__counter = VL_RAND_RESET_I(4);
+    vlSelf->I2C_slave__DOT__the_piso__DOT__counter_plus_1 = VL_RAND_RESET_I(4);
     vlSelf->I2C_slave__DOT__the_piso__DOT__register = VL_RAND_RESET_I(8);
+    vlSelf->I2C_slave__DOT__the_piso__DOT__shift = VL_RAND_RESET_I(1);
     vlSelf->__Vtrigprevexpr___TOP__clock__0 = VL_RAND_RESET_I(1);
     vlSelf->__Vtrigprevexpr___TOP__reset__0 = VL_RAND_RESET_I(1);
 }

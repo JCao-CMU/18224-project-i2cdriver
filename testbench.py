@@ -182,10 +182,10 @@ async def basic_test(dut):
     await FallingEdge(dut.clock)
 
     # Reset the DUT
-    dut.reset.value = True
-    await FallingEdge(dut.clock)
-    await FallingEdge(dut.clock)
     dut.reset.value = False
+    await FallingEdge(dut.clock)
+    await FallingEdge(dut.clock)
+    dut.reset.value = True
 
     for i in range(20):
         package_down = generate_down_packet()

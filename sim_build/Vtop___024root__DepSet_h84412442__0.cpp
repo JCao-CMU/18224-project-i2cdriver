@@ -34,8 +34,8 @@ void Vtop___024root___eval_triggers__act(Vtop___024root* vlSelf) {
     // Body
     vlSelf->__VactTriggered.set(0U, (((IData)(vlSelf->clock) 
                                       & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__clock__0))) 
-                                     | ((IData)(vlSelf->reset) 
-                                        & (~ (IData)(vlSelf->__Vtrigprevexpr___TOP__reset__0)))));
+                                     | ((~ (IData)(vlSelf->reset)) 
+                                        & (IData)(vlSelf->__Vtrigprevexpr___TOP__reset__0))));
     vlSelf->__Vtrigprevexpr___TOP__clock__0 = vlSelf->clock;
     vlSelf->__Vtrigprevexpr___TOP__reset__0 = vlSelf->reset;
 #ifdef VL_DEBUG

@@ -502,13 +502,9 @@ Removed 25 unused cells and 291 unused wires.
 
 2.10. Executing CHECK pass (checking for obvious problems).
 Checking module ChipInterface...
-Warning: multiple conflicting drivers for ChipInterface.\gp27:
-    port Y[0] of cell $flatten\dut.$procmux$877 ($pmux)
-    port Y[0] of cell $flatten\dut.$ternary$i2c.sv:220$15 ($mux)
 Warning: Wire ChipInterface.\gp25 is used but has no driver.
-Warning: Wire ChipInterface.\gp24 is used but has no driver.
 Warning: Wire ChipInterface.\dut.SCL is used but has no driver.
-Found and reported 4 problems.
+Found and reported 2 problems.
 
 2.11. Executing OPT pass (performing simple optimizations).
 
@@ -1044,7 +1040,7 @@ No more expansions possible.
 
 2.28.1. Executing OPT_EXPR pass (perform const folding).
 Optimizing module ChipInterface.
-<suppressed ~38 debug messages>
+<suppressed ~37 debug messages>
 
 2.28.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\ChipInterface'.
@@ -1428,7 +1424,7 @@ No more expansions possible.
 
 2.36. Executing OPT_EXPR pass (perform const folding).
 Optimizing module ChipInterface.
-<suppressed ~7 debug messages>
+<suppressed ~6 debug messages>
 
 2.37. Executing SIMPLEMAP pass (map simple cells to gate primitives).
 
@@ -1838,7 +1834,7 @@ Module ChipInterface: replaced 54 cells with 258 new cells, skipped 53 cells.
 
 2.42.19.3. Executing XAIGER backend.
 <suppressed ~11 debug messages>
-Extracted 86 AND gates and 338 wires from module `ChipInterface' to a netlist network with 22 inputs and 33 outputs.
+Extracted 86 AND gates and 342 wires from module `ChipInterface' to a netlist network with 22 inputs and 33 outputs.
 
 2.42.19.4. Executing ABC9_EXE pass (technology mapping using ABC9).
 
@@ -1850,41 +1846,41 @@ ABC: + read_lut <abc-temp-dir>/input.lut
 ABC: + read_box <abc-temp-dir>/input.box 
 ABC: + &read <abc-temp-dir>/input.xaig 
 ABC: + &ps 
-ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      60  lev =    9 (1.66)  mem = 0.00 MB  box = 10  bb = 10
+ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      61  lev =    7 (1.55)  mem = 0.00 MB  box = 10  bb = 10
 ABC: + &scorr 
 ABC: Warning: The network is combinational.
 ABC: + &sweep 
 ABC: + &dc2 
 ABC: + &dch -f 
 ABC: + &ps 
-ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      39  lev =    6 (0.91)  mem = 0.00 MB  ch =    2  box = 10  bb = 10
+ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      38  lev =    5 (0.77)  mem = 0.00 MB  ch =    3  box = 10  bb = 10
 ABC: + &if -W 300 -v 
 ABC: K = 7. Memory (bytes): Truth =    0. Cut =   60. Obj =  140. Set =  636. CutMin = no
-ABC: Node =      39.  Ch =     2.  Total mem =    0.02 MB. Peak cut mem =    0.00 MB.
-ABC: P:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      304.  T =     0.00 sec
-ABC: P:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      304.  T =     0.00 sec
-ABC: P:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      316.  T =     0.00 sec
-ABC: F:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      223.  T =     0.00 sec
-ABC: A:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      223.  T =     0.00 sec
-ABC: A:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      223.  T =     0.00 sec
+ABC: Node =      38.  Ch =     3.  Total mem =    0.02 MB. Peak cut mem =    0.00 MB.
+ABC: P:  Del = 1127.00.  Ar =      39.0.  Edge =       64.  Cut =      226.  T =     0.00 sec
+ABC: P:  Del = 1127.00.  Ar =      39.0.  Edge =       64.  Cut =      226.  T =     0.00 sec
+ABC: P:  Del = 1127.00.  Ar =      39.0.  Edge =       64.  Cut =      238.  T =     0.00 sec
+ABC: F:  Del = 1127.00.  Ar =      39.0.  Edge =       64.  Cut =      154.  T =     0.00 sec
+ABC: A:  Del = 1127.00.  Ar =      39.0.  Edge =       63.  Cut =      154.  T =     0.00 sec
+ABC: A:  Del = 1127.00.  Ar =      39.0.  Edge =       63.  Cut =      154.  T =     0.00 sec
 ABC: Total time =     0.00 sec
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + &mfs 
 ABC: The network is not changed by "&mfs".
 ABC: + &ps -l 
-ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      78  lev =    6 (0.91)  mem = 0.00 MB  box = 10  bb = 10
-ABC: Mapping (K=7)  :  lut =     14  edge =      65  lev =    2 (0.32)  levB =    3  mem = 0.00 MB
-ABC: LUT = 14 : 2=2 14.3 %  3=2 14.3 %  4=2 14.3 %  5=3 21.4 %  6=3 21.4 %  7=2 14.3 %  Ave = 4.64
+ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      61  lev =    5 (0.77)  mem = 0.00 MB  box = 10  bb = 10
+ABC: Mapping (K=7)  :  lut =     15  edge =      63  lev =    2 (0.36)  levB =    3  mem = 0.00 MB
+ABC: LUT = 15 : 2=3 20.0 %  3=4 26.7 %  4=2 13.3 %  5=1 6.7 %  6=3 20.0 %  7=2 13.3 %  Ave = 4.20
 ABC: + &write -n <abc-temp-dir>/output.aig 
 ABC: + time 
 ABC: elapse: 0.02 seconds, total: 0.02 seconds
 
 2.42.19.6. Executing AIGER frontend.
 <suppressed ~122 debug messages>
-Removed 111 unused cells and 182 unused wires.
+Removed 80 unused cells and 152 unused wires.
 
 2.42.19.7. Executing ABC9_OPS pass (helper functions for ABC9).
-ABC RESULTS:              $lut cells:       15
+ABC RESULTS:              $lut cells:       16
 ABC RESULTS:   $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp cells:        1
 ABC RESULTS:   $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp cells:        4
 ABC RESULTS:   $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp cells:        5
@@ -1909,7 +1905,7 @@ Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc
 Using template $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp for cells of type $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp.
 No more expansions possible.
 <suppressed ~31 debug messages>
-Removed 2 unused cells and 570 unused wires.
+Removed 0 unused cells and 568 unused wires.
 
 2.43. Executing TECHMAP pass (map to technology primitives).
 
@@ -1988,51 +1984,51 @@ Generating RTLIL representation for module `\$lut'.
 Successfully finished Verilog frontend.
 
 2.43.2. Continuing TECHMAP pass.
-Using template $paramod$3a57d0c4ff69f489976b0c62760252ae44e7bcc8\$lut for cells of type $lut.
 Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01101010 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
-Using template $paramod$677846851fbd103e137bc2ae48c37c939028462b\$lut for cells of type $lut.
-Using template $paramod$9cc51547ab44a72dd506ee5bb84a864365a103da\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00100000 for cells of type $lut.
 Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
 Using template $paramod$0f0af839563878d96ba67b9172d2c715d44a961a\$lut for cells of type $lut.
-Using template $paramod$0198e7a74ccc27dfa24c1e29733af266428fa3fd\$lut for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
-Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01001100 for cells of type $lut.
+Using template $paramod$9cc51547ab44a72dd506ee5bb84a864365a103da\$lut for cells of type $lut.
 Using template $paramod$346f22d75483af549a933464c55661d9b06fa7af\$lut for cells of type $lut.
-Using template $paramod$5f032cf4528890c6fc778db8fba9eab402a6b3eb\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01101010 for cells of type $lut.
 Using template $paramod$eea9db1a8b89e05cfd951a1e8aba4ebecbc63a75\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01001100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod$677846851fbd103e137bc2ae48c37c939028462b\$lut for cells of type $lut.
 Using template $paramod$6e595813a154d9d18c20a4032996fe374e18154d\$lut for cells of type $lut.
+Using template $paramod$0198e7a74ccc27dfa24c1e29733af266428fa3fd\$lut for cells of type $lut.
 No more expansions possible.
-<suppressed ~282 debug messages>
+<suppressed ~283 debug messages>
 
 2.44. Executing OPT_LUT_INS pass (discard unused LUT inputs).
 Optimizing LUTs in ChipInterface.
-  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
-  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
-  Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
-  Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 2)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 2)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
-  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
+  Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 0)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 1)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
   Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
-  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
   Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
-Removed 0 unused cells and 39 unused wires.
+Removed 0 unused cells and 41 unused wires.
 
 2.45. Executing AUTONAME pass.
-Renamed 486 objects in module ChipInterface (21 iterations).
-<suppressed ~136 debug messages>
+Renamed 431 objects in module ChipInterface (21 iterations).
+<suppressed ~129 debug messages>
 
 2.46. Executing HIERARCHY pass (managing design hierarchy).
 
@@ -2047,17 +2043,17 @@ Removed 0 unused modules.
 
 === ChipInterface ===
 
-   Number of wires:                126
-   Number of wire bits:            227
-   Number of public wires:         126
-   Number of public wire bits:     227
+   Number of wires:                122
+   Number of wire bits:            223
+   Number of public wires:         122
+   Number of public wire bits:     223
    Number of memories:               0
    Number of memory bits:            0
    Number of processes:              0
-   Number of cells:                 77
+   Number of cells:                 74
      L6MUX21                         9
-     LUT4                           41
-     PFUMX                          17
+     LUT4                           40
+     PFUMX                          15
      TRELLIS_FF                     10
 
 2.48. Executing CHECK pass (checking for obvious problems).
@@ -2066,7 +2062,7 @@ Found and reported 0 problems.
 
 2.49. Executing JSON backend.
 
-Warnings: 4 unique messages, 4 total
-End of script. Logfile hash: e2a91447c4, CPU: user 1.28s system 0.09s, MEM: 30.56 MB peak
+Warnings: 2 unique messages, 2 total
+End of script. Logfile hash: 4a4f39aae2, CPU: user 1.33s system 0.09s, MEM: 30.52 MB peak
 Yosys 0.36+3 (git sha1 a53032104, clang 10.0.0-4ubuntu1 -fPIC -Os)
-Time spent: 36% 21x read_verilog (0 sec), 11% 35x opt_expr (0 sec), ...
+Time spent: 33% 21x read_verilog (0 sec), 11% 35x opt_expr (0 sec), ...

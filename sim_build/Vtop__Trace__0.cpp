@@ -86,20 +86,22 @@ void Vtop___024root__trace_chg_0_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buf
     bufp->chgBit(oldp+60,(vlSelf->I2C_slave__DOT__the_piso__DOT__out));
     bufp->chgBit(oldp+61,(vlSelf->I2C_slave__DOT__the_piso__DOT__empty));
     bufp->chgCData(oldp+62,(vlSelf->I2C_slave__DOT__the_piso__DOT__counter),4);
-    bufp->chgCData(oldp+63,(vlSelf->I2C_slave__DOT__the_piso__DOT__register),8);
-    bufp->chgCData(oldp+64,(vlSelf->I2C_slave__DOT__the_reg__DOT__in),8);
-    bufp->chgCData(oldp+65,(vlSelf->I2C_slave__DOT__the_reg__DOT__out),8);
-    bufp->chgBit(oldp+66,(vlSelf->I2C_slave__DOT__the_reg__DOT__clock));
-    bufp->chgBit(oldp+67,(vlSelf->I2C_slave__DOT__the_reg__DOT__reset));
-    bufp->chgBit(oldp+68,(vlSelf->I2C_slave__DOT__the_reg__DOT__enable));
-    bufp->chgBit(oldp+69,(vlSelf->I2C_slave__DOT__the_sipo__DOT__data_in));
-    bufp->chgBit(oldp+70,(vlSelf->I2C_slave__DOT__the_sipo__DOT__clock));
-    bufp->chgBit(oldp+71,(vlSelf->I2C_slave__DOT__the_sipo__DOT__reset));
-    bufp->chgBit(oldp+72,(vlSelf->I2C_slave__DOT__the_sipo__DOT__clear));
-    bufp->chgBit(oldp+73,(vlSelf->I2C_slave__DOT__the_sipo__DOT__load));
-    bufp->chgCData(oldp+74,(vlSelf->I2C_slave__DOT__the_sipo__DOT__out),8);
-    bufp->chgBit(oldp+75,(vlSelf->I2C_slave__DOT__the_sipo__DOT__full));
-    bufp->chgCData(oldp+76,(vlSelf->I2C_slave__DOT__the_sipo__DOT__counter),4);
+    bufp->chgCData(oldp+63,(vlSelf->I2C_slave__DOT__the_piso__DOT__counter_plus_1),4);
+    bufp->chgCData(oldp+64,(vlSelf->I2C_slave__DOT__the_piso__DOT__register),8);
+    bufp->chgBit(oldp+65,(vlSelf->I2C_slave__DOT__the_piso__DOT__shift));
+    bufp->chgCData(oldp+66,(vlSelf->I2C_slave__DOT__the_reg__DOT__in),8);
+    bufp->chgCData(oldp+67,(vlSelf->I2C_slave__DOT__the_reg__DOT__out),8);
+    bufp->chgBit(oldp+68,(vlSelf->I2C_slave__DOT__the_reg__DOT__clock));
+    bufp->chgBit(oldp+69,(vlSelf->I2C_slave__DOT__the_reg__DOT__reset));
+    bufp->chgBit(oldp+70,(vlSelf->I2C_slave__DOT__the_reg__DOT__enable));
+    bufp->chgBit(oldp+71,(vlSelf->I2C_slave__DOT__the_sipo__DOT__data_in));
+    bufp->chgBit(oldp+72,(vlSelf->I2C_slave__DOT__the_sipo__DOT__clock));
+    bufp->chgBit(oldp+73,(vlSelf->I2C_slave__DOT__the_sipo__DOT__reset));
+    bufp->chgBit(oldp+74,(vlSelf->I2C_slave__DOT__the_sipo__DOT__clear));
+    bufp->chgBit(oldp+75,(vlSelf->I2C_slave__DOT__the_sipo__DOT__load));
+    bufp->chgCData(oldp+76,(vlSelf->I2C_slave__DOT__the_sipo__DOT__out),8);
+    bufp->chgBit(oldp+77,(vlSelf->I2C_slave__DOT__the_sipo__DOT__full));
+    bufp->chgCData(oldp+78,(vlSelf->I2C_slave__DOT__the_sipo__DOT__counter),4);
 }
 
 void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {

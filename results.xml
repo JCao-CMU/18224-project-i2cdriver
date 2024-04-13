@@ -1,6 +1,6 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1710817774" />
-    <testcase name="basic_test" classname="testbench" file="/home/user/Desktop/18224-project-i2cdriver/testbench.py" lineno="171" time="11.625072479248047" sim_time_ns="470505.001" ratio_time="40473.29613126283" />
+    <property name="random_seed" value="1712976858" />
+    <testcase name="basic_test" classname="testbench" file="/home/user/Desktop/18224-project-i2cdriver/testbench.py" lineno="171" time="7.555164337158203" sim_time_ns="470505.001" ratio_time="62275.94530087688" />
   </testsuite>
 </testsuites>

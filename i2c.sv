@@ -456,8 +456,6 @@ module PISO(
     assign counter_plus_1 = counter + 'd1;
 
     always_ff @(posedge clock, negedge reset) begin: the_piso
-        // register <= 'b0;
-        // counter <= 'b0;
         if (~reset) begin
             register <= 'b0;
             counter <= 'd8;
@@ -469,7 +467,7 @@ module PISO(
             out <= 'd0;
         end 
         else if (shift) begin
-            register <= {register[6:0], 'd0};
+            register <= {register[6:0], 1'd0};
             counter <= counter_plus_1;
             out <= register[7];
         end

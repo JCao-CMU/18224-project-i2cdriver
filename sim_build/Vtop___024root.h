@@ -94,7 +94,9 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
         CData/*0:0*/ I2C_slave__DOT__the_piso__DOT__out;
         CData/*0:0*/ I2C_slave__DOT__the_piso__DOT__empty;
         CData/*3:0*/ I2C_slave__DOT__the_piso__DOT__counter;
+        CData/*3:0*/ I2C_slave__DOT__the_piso__DOT__counter_plus_1;
         CData/*7:0*/ I2C_slave__DOT__the_piso__DOT__register;
+        CData/*0:0*/ I2C_slave__DOT__the_piso__DOT__shift;
         CData/*0:0*/ __VstlFirstIteration;
         CData/*0:0*/ __VicoFirstIteration;
         CData/*0:0*/ __Vtrigprevexpr___TOP__clock__0;
@@ -115,8 +117,6 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule
     static constexpr IData/*31:0*/ I2C_slave__DOT__the_sipo__DOT__SIZE = 8U;
     static constexpr IData/*31:0*/ I2C_slave__DOT__the_sipo__DOT__UNIT = 1U;
     static constexpr IData/*31:0*/ I2C_slave__DOT__the_reg__DOT__SIZE = 8U;
-    static constexpr IData/*31:0*/ I2C_slave__DOT__the_piso__DOT__SIZE = 8U;
-    static constexpr IData/*31:0*/ I2C_slave__DOT__the_piso__DOT__UNIT = 1U;
 
     // CONSTRUCTORS
     Vtop___024root(Vtop__Syms* symsp, const char* v__name);
