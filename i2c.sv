@@ -1,5 +1,21 @@
 `default_nettype none
 
+module ChipInterface (
+    input logic clk, rst_n, 
+    input logic gp14, gp15, gp16, gp17, gp18, gp19, gp20, gp21, gp22, gp23,
+    output logic gp24, gp25, gp26, gp27, 
+    output logic [7:0]led
+);
+    logic posreset;
+    // assign posreset = ~rst_n;
+    logic [7:0] lever_input;
+    assign lever_input = {gp21, gp20, gp19, gp18, gp17, gp16, gp15, gp14};
+    I2C_slave dut(.clock(clk), .reset(rst_n), .SDA_in(gp22), 
+    .SDA_out(gp27), .SCL(gp26), .wr_up(gp24), .data_in(lever_input), 
+    .data_out(led), .writeOK(), .wr_down(), .data_incoming(gp23));
+
+endmodule
+
 module I2C_slave (
     // in every circuit
     input logic clock, reset, 
@@ -154,8 +170,8 @@ module I2C_slave (
         endcase
     end
 
-    always_ff @(posedge clock, posedge reset) begin
-        if (reset) begin
+    always_ff @(posedge clock, negedge reset) begin
+        if (~reset) begin
             scl_state <= SCL1; // B/c i2c lines were pulled UP, so by default
             sda_state <= SDA1; // they are 1.
             start_state <= WAIT_START;
@@ -377,8 +393,8 @@ module I2C_slave (
         endcase
     end
 
-    always_ff @(posedge clock, posedge reset) begin
-        if (reset)
+    always_ff @(posedge clock, negedge reset) begin
+        if (~reset)
             state <= IDLE;
         else
             state <= nextstate;
@@ -401,12 +417,16 @@ module SIPO #(
 
     assign full = counter == SIZE;
 
-    always_ff @(posedge clock, posedge reset) begin
-        if (reset || clear) begin
+    always_ff @(posedge clock, negedge reset) begin
+        if (~reset) begin
             out <= 'b0;
             counter <= 'b0;
         end
         else begin
+            if (clear) begin
+                out <= 'b0;
+                counter <= 'b0;
+            end
             if (load && counter != SIZE) begin
                 out <= {out[SIZE-UNIT-1:0], data_in};
                 counter <= counter + 'd1;
@@ -416,40 +436,42 @@ module SIPO #(
     
 endmodule: SIPO
 
-module PISO #(
-    parameter SIZE = 8, 
-    parameter UNIT = 1
-) (
-    input  logic [SIZE-1:0] data_in, 
+module PISO(
+    input  logic [7:0] data_in, 
     input  logic            clock, reset, 
     input  logic            spit, load, 
-    output logic [UNIT-1:0] out, 
+    output logic  out, 
     output logic            empty
 );
 
-    logic [$clog2(SIZE):0] counter;
+    logic [3:0] counter, counter_plus_1;
 
-    logic [SIZE-1:0] register;
+    logic [7:0] register;
 
-    assign empty = counter == SIZE;
+    assign empty = counter == 8;
 
-    always_ff @(posedge clock, posedge reset) begin
-        if (reset) begin
+    logic shift;
+    assign shift = spit && !empty;
+
+    assign counter_plus_1 = counter + 'd1;
+
+    always_ff @(posedge clock, negedge reset) begin: the_piso
+        // register <= 'b0;
+        // counter <= 'b0;
+        if (~reset) begin
             register <= 'b0;
-            counter <= SIZE;
+            counter <= 'd8;
             out <= 'd0;
         end
-        else begin
-            if (load) begin
-                register <= data_in;
-                counter <= 'd0;
-                out <= 'd0;
-            end 
-            else if (spit && counter != SIZE) begin
-                register <= {register[SIZE-UNIT-1:0], {UNIT{1'b0}}};
-                counter <= counter + 1;
-                out <= register[SIZE-1];
-            end
+        else if (load) begin
+            register <= data_in;
+            counter <= 'd0;
+            out <= 'd0;
+        end 
+        else if (shift) begin
+            register <= {register[6:0], 'd0};
+            counter <= counter_plus_1;
+            out <= register[7];
         end
     end
     
@@ -464,8 +486,8 @@ module Register #(
     input  logic            enable
 );
 
-    always_ff @(posedge clock, posedge reset) begin
-        if (reset)
+    always_ff @(posedge clock, negedge reset) begin
+        if (~reset)
             out <= 'b0;
         else if (enable) begin
             out <= in;

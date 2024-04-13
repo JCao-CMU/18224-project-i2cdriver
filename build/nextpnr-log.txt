@@ -1,0 +1,228 @@
+Warning: Use of default value for --package is deprecated. Please add '--package CABGA381' to arguments.
+Info: constraining clock net 'clk' to 25.00 MHz
+Warning: net 'gn[12]' does not exist in design, ignoring clock constraint
+Warning: net 'gn12' does not exist in design, ignoring clock constraint
+
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:        41/24288     0%
+Info:         logic LUTs:     41/24288     0%
+Info:         carry LUTs:      0/24288     0%
+Info:           RAM LUTs:      0/ 3036     0%
+Info:          RAMW LUTs:      0/ 6072     0%
+
+Info:      Total DFFs:        10/24288     0%
+
+Info: Packing IOs..
+Info: pin 'rst_n$tr_io' constrained to Bel 'X6/Y0/PIOB'.
+Info: pin 'led[7]$tr_io' constrained to Bel 'X0/Y20/PIOD'.
+Info: pin 'led[6]$tr_io' constrained to Bel 'X0/Y17/PIOD'.
+Info: pin 'led[5]$tr_io' constrained to Bel 'X0/Y23/PIOD'.
+Info: pin 'led[4]$tr_io' constrained to Bel 'X0/Y17/PIOB'.
+Info: pin 'led[3]$tr_io' constrained to Bel 'X0/Y17/PIOC'.
+Info: pin 'led[2]$tr_io' constrained to Bel 'X0/Y17/PIOA'.
+Info: pin 'led[1]$tr_io' constrained to Bel 'X0/Y14/PIOD'.
+Info: pin 'led[0]$tr_io' constrained to Bel 'X0/Y14/PIOC'.
+Info: pin 'gp27$tr_io' constrained to Bel 'X44/Y0/PIOA'.
+Info: pin 'gp26$tr_io' constrained to Bel 'X42/Y0/PIOA'.
+Info: pin 'gp25$tr_io' constrained to Bel 'X49/Y0/PIOA'.
+Info: pin 'gp24$tr_io' constrained to Bel 'X58/Y0/PIOA'.
+Info: pin 'gp23$tr_io' constrained to Bel 'X60/Y0/PIOA'.
+Info: pin 'gp22$tr_io' constrained to Bel 'X51/Y0/PIOA'.
+Info: pin 'gp21$tr_io' constrained to Bel 'X72/Y2/PIOA'.
+Info: pin 'gp20$tr_io' constrained to Bel 'X72/Y5/PIOA'.
+Info: pin 'gp19$tr_io' constrained to Bel 'X72/Y8/PIOA'.
+Info: pin 'gp18$tr_io' constrained to Bel 'X72/Y11/PIOA'.
+Info: pin 'gp17$tr_io' constrained to Bel 'X72/Y29/PIOA'.
+Info: pin 'gp16$tr_io' constrained to Bel 'X72/Y32/PIOA'.
+Info: pin 'gp15$tr_io' constrained to Bel 'X72/Y35/PIOA'.
+Info: pin 'gp14$tr_io' constrained to Bel 'X72/Y47/PIOA'.
+Info: pin 'clk$tr_io' constrained to Bel 'X0/Y26/PIOA'.
+Info: Packing constants..
+Info: Packing carries...
+Info: Packing LUTs...
+Info: Packing LUT5-7s...
+Info: Packing FFs...
+Info:     4 FFs paired with LUTs.
+Info: Generating derived timing constraints...
+Info: Promoting globals...
+Info:     promoting clock net clk$TRELLIS_IO_IN to global network
+Info: Checksum: 0xa7c4c522
+
+Info: Device utilisation:
+Info: 	          TRELLIS_IO:    24/  197    12%
+Info: 	                DCCA:     1/   56     1%
+Info: 	              DP16KD:     0/   56     0%
+Info: 	          MULT18X18D:     0/   28     0%
+Info: 	              ALU54B:     0/   14     0%
+Info: 	             EHXPLLL:     0/    2     0%
+Info: 	             EXTREFB:     0/    1     0%
+Info: 	                DCUA:     0/    1     0%
+Info: 	           PCSCLKDIV:     0/    2     0%
+Info: 	             IOLOGIC:     0/  128     0%
+Info: 	            SIOLOGIC:     0/   69     0%
+Info: 	                 GSR:     0/    1     0%
+Info: 	               JTAGG:     0/    1     0%
+Info: 	                OSCG:     0/    1     0%
+Info: 	               SEDGA:     0/    1     0%
+Info: 	                 DTR:     0/    1     0%
+Info: 	             USRMCLK:     0/    1     0%
+Info: 	             CLKDIVF:     0/    4     0%
+Info: 	           ECLKSYNCB:     0/   10     0%
+Info: 	             DLLDELD:     0/    8     0%
+Info: 	              DDRDLL:     0/    4     0%
+Info: 	             DQSBUFM:     0/    8     0%
+Info: 	     TRELLIS_ECLKBUF:     0/    8     0%
+Info: 	        ECLKBRIDGECS:     0/    2     0%
+Info: 	                DCSC:     0/    2     0%
+Info: 	          TRELLIS_FF:    10/24288     0%
+Info: 	        TRELLIS_COMB:    42/24288     0%
+Info: 	        TRELLIS_RAMW:     0/ 3036     0%
+
+Info: Placed 24 cells based on constraints.
+Info: Creating initial analytic placement for 22 cells, random placement wirelen = 1694.
+Info:     at initial placer iter 0, wirelen = 130
+Info:     at initial placer iter 1, wirelen = 97
+Info:     at initial placer iter 2, wirelen = 101
+Info:     at initial placer iter 3, wirelen = 97
+Info: Running main analytical placer, max placement attempts per cell = 10000.
+Info:     at iteration #1, type ALL: wirelen solved = 101, spread = 173, legal = 180; time = 0.02s
+Info:     at iteration #2, type ALL: wirelen solved = 103, spread = 150, legal = 155; time = 0.00s
+Info:     at iteration #3, type ALL: wirelen solved = 105, spread = 164, legal = 167; time = 0.00s
+Info:     at iteration #4, type ALL: wirelen solved = 101, spread = 160, legal = 165; time = 0.00s
+Info:     at iteration #5, type ALL: wirelen solved = 107, spread = 161, legal = 163; time = 0.00s
+Info:     at iteration #6, type ALL: wirelen solved = 115, spread = 181, legal = 187; time = 0.00s
+Info:     at iteration #7, type ALL: wirelen solved = 121, spread = 161, legal = 164; time = 0.00s
+Info: HeAP Placer Time: 0.10s
+Info:   of which solving equations: 0.02s
+Info:   of which spreading cells: 0.01s
+Info:   of which strict legalisation: 0.00s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 18, wirelen = 155
+Info:   at iteration #5: temp = 0.000000, timing cost = 17, wirelen = 146
+Info:   at iteration #5: temp = 0.000000, timing cost = 15, wirelen = 146 
+Info: SA placement time 0.01s
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 282.73 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 7.86 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 3.69 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 36463,  36584) |* 
+Info: [ 36584,  36705) |* 
+Info: [ 36705,  36826) | 
+Info: [ 36826,  36947) | 
+Info: [ 36947,  37068) |*** 
+Info: [ 37068,  37189) | 
+Info: [ 37189,  37310) |**** 
+Info: [ 37310,  37431) | 
+Info: [ 37431,  37552) |* 
+Info: [ 37552,  37673) | 
+Info: [ 37673,  37794) |** 
+Info: [ 37794,  37915) | 
+Info: [ 37915,  38036) | 
+Info: [ 38036,  38157) | 
+Info: [ 38157,  38278) |** 
+Info: [ 38278,  38399) | 
+Info: [ 38399,  38520) | 
+Info: [ 38520,  38641) | 
+Info: [ 38641,  38762) | 
+Info: [ 38762,  38883) |** 
+Info: Checksum: 0x947e877f
+Info: Routing globals...
+Info:     routing clock net $glbnet$clk$TRELLIS_IO_IN using global 0
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 185 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:        276 |       89        170 |   89   170 |         0|       0.06       0.06|
+Info: Routing complete.
+Info: Router1 time 0.06s
+Info: Checksum: 0x51f8532a
+
+Info: Critical path report for clock '$glbnet$clk$TRELLIS_IO_IN' (posedge -> posedge):
+Info: curr total
+Info:  0.5  0.5  Source gp21_L6MUX21_SD_Z_L6MUX21_D1_Z_TRELLIS_FF_DI_Q_TRELLIS_FF_Q_3.Q
+Info:  1.0  1.5    Net gp21_L6MUX21_SD_Z_L6MUX21_D1_Z_TRELLIS_FF_DI_Q[4] (44,3) -> (44,2)
+Info:                Sink dut.piso_load_TRELLIS_FF_CE_Q_LUT4_Z.C
+Info:                Defined in:
+Info:                  /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.2  1.7  Source dut.piso_load_TRELLIS_FF_CE_Q_LUT4_Z.F
+Info:  0.8  2.6    Net dut.piso_load_TRELLIS_FF_CE_Q[5] (44,2) -> (45,3)
+Info:                Sink gp23_PFUMX_C0_2_ALUT_LUT4_Z.M
+Info:                Defined in:
+Info:                  /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.3  2.8  Source gp23_PFUMX_C0_2_ALUT_LUT4_Z.OFX
+Info:  0.7  3.5    Net gp23_PFUMX_C0_Z_L6MUX21_D1_Z[0] (45,3) -> (45,2)
+Info:                Sink dut.piso_load_TRELLIS_FF_CE_3.M
+Info:  0.0  3.5  Setup dut.piso_load_TRELLIS_FF_CE_3.M
+Info: 1.0 ns logic, 2.5 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge $glbnet$clk$TRELLIS_IO_IN':
+Info: curr total
+Info:  0.0  0.0  Source rst_n$tr_io.O
+Info:  1.5  1.5    Net rst_n$TRELLIS_IO_IN (6,0) -> (15,2)
+Info:                Sink rst_n_LUT4_D.D
+Info:                Defined in:
+Info:                  i2c.sv:4.22-4.27
+Info:  0.2  1.7  Source rst_n_LUT4_D.F
+Info:  2.3  4.0    Net rst_n_LUT4_D_Z (15,2) -> (45,2)
+Info:                Sink dut.piso_load_TRELLIS_FF_CE_3.LSR
+Info:  0.4  4.4  Setup dut.piso_load_TRELLIS_FF_CE_3.LSR
+Info: 0.7 ns logic, 3.7 ns routing
+
+Info: Critical path report for cross-domain path 'posedge $glbnet$clk$TRELLIS_IO_IN' -> '<async>':
+Info: curr total
+Info:  0.5  0.5  Source gp21_L6MUX21_SD_Z_L6MUX21_D1_Z_TRELLIS_FF_DI_Q_TRELLIS_FF_Q_2.Q
+Info:  0.9  1.4    Net gp21_L6MUX21_SD_Z_L6MUX21_D1_Z_TRELLIS_FF_DI_Q[3] (44,3) -> (42,3)
+Info:                Sink gp27_PFUMX_Z_ALUT_LUT4_Z.C
+Info:                Defined in:
+Info:                  /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24
+Info:  0.2  1.7  Source gp27_PFUMX_Z_ALUT_LUT4_Z.F
+Info:  0.0  1.7    Net gp27_PFUMX_Z_ALUT (42,3) -> (42,3)
+Info:                Sink gp27_PFUMX_Z_BLUT_LUT4_Z.F1
+Info:                Defined in:
+Info:                  /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24
+Info:  0.2  1.8  Source gp27_PFUMX_Z_BLUT_LUT4_Z.OFX
+Info:  1.1  3.0    Net gp27$TRELLIS_IO_OUT (42,3) -> (44,0)
+Info:                Sink gp27$tr_io.I
+Info:                Defined in:
+Info:                  i2c.sv:6.36-6.40
+Info: 0.9 ns logic, 2.1 ns routing
+
+Info: Max frequency for clock '$glbnet$clk$TRELLIS_IO_IN': 286.20 MHz (PASS at 25.00 MHz)
+
+Info: Max delay <async>                           -> posedge $glbnet$clk$TRELLIS_IO_IN: 4.40 ns
+Info: Max delay posedge $glbnet$clk$TRELLIS_IO_IN -> <async>                          : 2.98 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 1 endpoint(s)
+Info:          + represents [1,1) endpoint(s)
+Info: [ 36506,  36604) |* 
+Info: [ 36604,  36702) | 
+Info: [ 36702,  36800) |* 
+Info: [ 36800,  36898) | 
+Info: [ 36898,  36996) |** 
+Info: [ 36996,  37094) |* 
+Info: [ 37094,  37192) |***** 
+Info: [ 37192,  37290) | 
+Info: [ 37290,  37388) | 
+Info: [ 37388,  37486) | 
+Info: [ 37486,  37584) | 
+Info: [ 37584,  37682) | 
+Info: [ 37682,  37780) |* 
+Info: [ 37780,  37878) |* 
+Info: [ 37878,  37976) |* 
+Info: [ 37976,  38074) | 
+Info: [ 38074,  38172) | 
+Info: [ 38172,  38270) |* 
+Info: [ 38270,  38368) |* 
+Info: [ 38368,  38466) |* 
+3 warnings, 0 errors
+
+Info: Program finished normally.

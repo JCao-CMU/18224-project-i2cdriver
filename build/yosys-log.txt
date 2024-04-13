@@ -1,0 +1,2072 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.36+3 (git sha1 a53032104, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Running command `read_verilog -sv i2c.sv; synth_ecp5 -json build/synth_out.json -top ChipInterface' --
+
+1. Executing Verilog-2005 frontend: i2c.sv
+Parsing SystemVerilog input from `i2c.sv' to AST representation.
+Generating RTLIL representation for module `\ChipInterface'.
+Generating RTLIL representation for module `\I2C_slave'.
+Generating RTLIL representation for module `\SIPO'.
+Generating RTLIL representation for module `\PISO'.
+Generating RTLIL representation for module `\Register'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH_ECP5 pass.
+
+2.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\LUT4'.
+Generating RTLIL representation for module `\$__ABC9_LUT5'.
+Generating RTLIL representation for module `\$__ABC9_LUT6'.
+Generating RTLIL representation for module `\$__ABC9_LUT7'.
+Generating RTLIL representation for module `\L6MUX21'.
+Generating RTLIL representation for module `\CCU2C'.
+Generating RTLIL representation for module `\TRELLIS_RAM16X2'.
+Generating RTLIL representation for module `\PFUMX'.
+Generating RTLIL representation for module `\TRELLIS_DPR16X4'.
+Generating RTLIL representation for module `\DPR16X4C'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\TRELLIS_FF'.
+Generating RTLIL representation for module `\TRELLIS_IO'.
+Generating RTLIL representation for module `\INV'.
+Generating RTLIL representation for module `\TRELLIS_COMB'.
+Generating RTLIL representation for module `\DP16KD'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+2.2. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_bb.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_bb.v' to AST representation.
+Generating RTLIL representation for module `\MULT18X18D'.
+Generating RTLIL representation for module `\ALU54B'.
+Generating RTLIL representation for module `\EHXPLLL'.
+Generating RTLIL representation for module `\DTR'.
+Generating RTLIL representation for module `\OSCG'.
+Generating RTLIL representation for module `\USRMCLK'.
+Generating RTLIL representation for module `\JTAGG'.
+Generating RTLIL representation for module `\DELAYF'.
+Generating RTLIL representation for module `\DELAYG'.
+Generating RTLIL representation for module `\IDDRX1F'.
+Generating RTLIL representation for module `\IDDRX2F'.
+Generating RTLIL representation for module `\IDDR71B'.
+Generating RTLIL representation for module `\IDDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX1F'.
+Generating RTLIL representation for module `\ODDRX2F'.
+Generating RTLIL representation for module `\ODDR71B'.
+Generating RTLIL representation for module `\OSHX2A'.
+Generating RTLIL representation for module `\ODDRX2DQA'.
+Generating RTLIL representation for module `\ODDRX2DQSB'.
+Generating RTLIL representation for module `\TSHX2DQA'.
+Generating RTLIL representation for module `\TSHX2DQSA'.
+Generating RTLIL representation for module `\DQSBUFM'.
+Generating RTLIL representation for module `\DDRDLLA'.
+Generating RTLIL representation for module `\DLLDELD'.
+Generating RTLIL representation for module `\CLKDIVF'.
+Generating RTLIL representation for module `\ECLKSYNCB'.
+Generating RTLIL representation for module `\ECLKBRIDGECS'.
+Generating RTLIL representation for module `\DCCA'.
+Generating RTLIL representation for module `\DCSC'.
+Generating RTLIL representation for module `\DCUA'.
+Generating RTLIL representation for module `\EXTREFB'.
+Generating RTLIL representation for module `\PCSCLKDIV'.
+Generating RTLIL representation for module `\PUR'.
+Generating RTLIL representation for module `\GSR'.
+Generating RTLIL representation for module `\SGSR'.
+Generating RTLIL representation for module `\PDPW16KD'.
+Successfully finished Verilog frontend.
+
+2.3. Executing HIERARCHY pass (managing design hierarchy).
+
+2.3.1. Analyzing design hierarchy..
+Top module:  \ChipInterface
+Used module:     \I2C_slave
+Used module:         \PISO
+Used module:         \Register
+Used module:         \SIPO
+
+2.3.2. Analyzing design hierarchy..
+Top module:  \ChipInterface
+Used module:     \I2C_slave
+Used module:         \PISO
+Used module:         \Register
+Used module:         \SIPO
+Removed 0 unused modules.
+
+2.4. Executing PROC pass (convert processes to netlists).
+
+2.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:213$172'.
+Cleaned up 1 empty switch.
+
+2.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:350$279 in module TRELLIS_FF.
+Marked 1 switch rules as full_case in process $proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:285$231 in module DPR16X4C.
+Marked 1 switch rules as full_case in process $proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:221$173 in module TRELLIS_DPR16X4.
+Marked 1 switch rules as full_case in process $proc$i2c.sv:489$54 in module Register.
+Marked 2 switch rules as full_case in process $proc$i2c.sv:458$52 in module PISO.
+Marked 1 switch rules as full_case in process $proc$i2c.sv:420$43 in module SIPO.
+Marked 1 switch rules as full_case in process $proc$i2c.sv:396$40 in module I2C_slave.
+Marked 19 switch rules as full_case in process $proc$i2c.sv:0$21 in module I2C_slave.
+Marked 1 switch rules as full_case in process $proc$i2c.sv:173$12 in module I2C_slave.
+Removed 1 dead cases from process $proc$i2c.sv:0$9 in module I2C_slave.
+Marked 4 switch rules as full_case in process $proc$i2c.sv:0$9 in module I2C_slave.
+Removed 1 dead cases from process $proc$i2c.sv:0$5 in module I2C_slave.
+Marked 4 switch rules as full_case in process $proc$i2c.sv:0$5 in module I2C_slave.
+Removed 1 dead cases from process $proc$i2c.sv:0$3 in module I2C_slave.
+Marked 3 switch rules as full_case in process $proc$i2c.sv:0$3 in module I2C_slave.
+Removed 1 dead cases from process $proc$i2c.sv:0$1 in module I2C_slave.
+Marked 3 switch rules as full_case in process $proc$i2c.sv:0$1 in module I2C_slave.
+Removed a total of 4 dead cases.
+
+2.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 5 redundant assignments.
+Promoted 64 assignments to connections.
+
+2.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$280'.
+  Set init value: \Q = 1'0
+
+2.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `\Register.$proc$i2c.sv:489$54'.
+Found async reset \reset in `\PISO.$proc$i2c.sv:458$52'.
+Found async reset \reset in `\SIPO.$proc$i2c.sv:420$43'.
+Found async reset \reset in `\I2C_slave.$proc$i2c.sv:396$40'.
+Found async reset \reset in `\I2C_slave.$proc$i2c.sv:173$12'.
+
+2.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~43 debug messages>
+
+2.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$280'.
+Creating decoders for process `\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:350$279'.
+     1/1: $0\Q[0:0]
+Creating decoders for process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+Creating decoders for process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:285$231'.
+     1/3: $1$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:287$230_EN[3:0]$237
+     2/3: $1$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:287$230_DATA[3:0]$236
+     3/3: $1$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:287$230_ADDR[3:0]$235
+Creating decoders for process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+Creating decoders for process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:221$173'.
+     1/3: $1$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:223$171_EN[3:0]$179
+     2/3: $1$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:223$171_DATA[3:0]$178
+     3/3: $1$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:223$171_ADDR[3:0]$177
+Creating decoders for process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:213$172'.
+Creating decoders for process `\Register.$proc$i2c.sv:489$54'.
+     1/1: $0\out[7:0]
+Creating decoders for process `\PISO.$proc$i2c.sv:458$52'.
+     1/3: $0\register[7:0]
+     2/3: $0\counter[3:0]
+     3/3: $0\out[0:0]
+Creating decoders for process `\SIPO.$proc$i2c.sv:420$43'.
+     1/2: $0\counter[3:0]
+     2/2: $0\out[7:0]
+Creating decoders for process `\I2C_slave.$proc$i2c.sv:396$40'.
+     1/1: $0\state[3:0]
+Creating decoders for process `\I2C_slave.$proc$i2c.sv:0$21'.
+     1/47: $20\nextstate[3:0]
+     2/47: $19\nextstate[3:0]
+     3/47: $18\nextstate[3:0]
+     4/47: $5\wr_up[0:0]
+     5/47: $17\nextstate[3:0]
+     6/47: $4\wr_up[0:0]
+     7/47: $4\piso_spit[0:0]
+     8/47: $16\nextstate[3:0]
+     9/47: $3\wr_up[0:0]
+    10/47: $3\piso_spit[0:0]
+    11/47: $15\nextstate[3:0]
+    12/47: $2\wr_up[0:0]
+    13/47: $2\piso_spit[0:0]
+    14/47: $7\ack[0:0]
+    15/47: $14\nextstate[3:0]
+    16/47: $6\ack[0:0]
+    17/47: $13\nextstate[3:0]
+    18/47: $12\nextstate[3:0]
+    19/47: $3\store[0:0]
+    20/47: $5\ack[0:0]
+    21/47: $11\nextstate[3:0]
+    22/47: $4\sipo_load[0:0]
+    23/47: $4\ack[0:0]
+    24/47: $2\store[0:0]
+    25/47: $10\nextstate[3:0]
+    26/47: $3\sipo_load[0:0]
+    27/47: $9\nextstate[3:0]
+    28/47: $3\sipo_clear[0:0]
+    29/47: $3\ack[0:0]
+    30/47: $8\nextstate[3:0]
+    31/47: $2\ack[0:0]
+    32/47: $7\nextstate[3:0]
+    33/47: $6\nextstate[3:0]
+    34/47: $5\nextstate[3:0]
+    35/47: $4\nextstate[3:0]
+    36/47: $3\nextstate[3:0]
+    37/47: $2\sipo_load[0:0]
+    38/47: $2\nextstate[3:0]
+    39/47: $2\sipo_clear[0:0]
+    40/47: $1\nextstate[3:0]
+    41/47: $1\sipo_clear[0:0]
+    42/47: $1\ack[0:0]
+    43/47: $1\piso_spit[0:0]
+    44/47: $1\store[0:0]
+    45/47: $1\sipo_load[0:0]
+    46/47: $1\wr_down[0:0]
+    47/47: $1\wr_up[0:0]
+Creating decoders for process `\I2C_slave.$proc$i2c.sv:173$12'.
+     1/4: $0\stop_state[0:0]
+     2/4: $0\start_state[0:0]
+     3/4: $0\sda_state[0:0]
+     4/4: $0\scl_state[0:0]
+Creating decoders for process `\I2C_slave.$proc$i2c.sv:0$9'.
+     1/6: $4\stop_nextstate[0:0]
+     2/6: $3\stop_nextstate[0:0]
+     3/6: $2\i2c_stop[0:0]
+     4/6: $2\stop_nextstate[0:0]
+     5/6: $1\stop_nextstate[0:0]
+     6/6: $1\i2c_stop[0:0]
+Creating decoders for process `\I2C_slave.$proc$i2c.sv:0$5'.
+     1/6: $4\start_nextstate[0:0]
+     2/6: $3\start_nextstate[0:0]
+     3/6: $2\i2c_start[0:0]
+     4/6: $2\start_nextstate[0:0]
+     5/6: $1\start_nextstate[0:0]
+     6/6: $1\i2c_start[0:0]
+Creating decoders for process `\I2C_slave.$proc$i2c.sv:0$3'.
+     1/13: $3\sda_nextstate[0:0]
+     2/13: $3\sda_low[0:0]
+     3/13: $2\sda_fall[0:0]
+     4/13: $3\sda_high[0:0]
+     5/13: $2\sda_nextstate[0:0]
+     6/13: $2\sda_high[0:0]
+     7/13: $2\sda_rise[0:0]
+     8/13: $2\sda_low[0:0]
+     9/13: $1\sda_low[0:0]
+    10/13: $1\sda_high[0:0]
+    11/13: $1\sda_rise[0:0]
+    12/13: $1\sda_nextstate[0:0]
+    13/13: $1\sda_fall[0:0]
+Creating decoders for process `\I2C_slave.$proc$i2c.sv:0$1'.
+     1/13: $3\scl_nextstate[0:0]
+     2/13: $3\scl_low[0:0]
+     3/13: $2\scl_fall[0:0]
+     4/13: $3\scl_high[0:0]
+     5/13: $2\scl_nextstate[0:0]
+     6/13: $2\scl_high[0:0]
+     7/13: $2\scl_rise[0:0]
+     8/13: $2\scl_low[0:0]
+     9/13: $1\scl_low[0:0]
+    10/13: $1\scl_high[0:0]
+    11/13: $1\scl_rise[0:0]
+    12/13: $1\scl_nextstate[0:0]
+    13/13: $1\scl_fall[0:0]
+
+2.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\I2C_slave.\wr_up' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\wr_down' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\sipo_load' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\sipo_clear' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\store' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\piso_spit' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\ack' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\nextstate' from process `\I2C_slave.$proc$i2c.sv:0$21'.
+No latch inferred for signal `\I2C_slave.\stop_nextstate' from process `\I2C_slave.$proc$i2c.sv:0$9'.
+No latch inferred for signal `\I2C_slave.\i2c_stop' from process `\I2C_slave.$proc$i2c.sv:0$9'.
+No latch inferred for signal `\I2C_slave.\start_nextstate' from process `\I2C_slave.$proc$i2c.sv:0$5'.
+No latch inferred for signal `\I2C_slave.\i2c_start' from process `\I2C_slave.$proc$i2c.sv:0$5'.
+No latch inferred for signal `\I2C_slave.\sda_nextstate' from process `\I2C_slave.$proc$i2c.sv:0$3'.
+No latch inferred for signal `\I2C_slave.\sda_rise' from process `\I2C_slave.$proc$i2c.sv:0$3'.
+No latch inferred for signal `\I2C_slave.\sda_fall' from process `\I2C_slave.$proc$i2c.sv:0$3'.
+No latch inferred for signal `\I2C_slave.\sda_high' from process `\I2C_slave.$proc$i2c.sv:0$3'.
+No latch inferred for signal `\I2C_slave.\sda_low' from process `\I2C_slave.$proc$i2c.sv:0$3'.
+No latch inferred for signal `\I2C_slave.\scl_nextstate' from process `\I2C_slave.$proc$i2c.sv:0$1'.
+No latch inferred for signal `\I2C_slave.\scl_rise' from process `\I2C_slave.$proc$i2c.sv:0$1'.
+No latch inferred for signal `\I2C_slave.\scl_fall' from process `\I2C_slave.$proc$i2c.sv:0$1'.
+No latch inferred for signal `\I2C_slave.\scl_high' from process `\I2C_slave.$proc$i2c.sv:0$1'.
+No latch inferred for signal `\I2C_slave.\scl_low' from process `\I2C_slave.$proc$i2c.sv:0$1'.
+
+2.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\TRELLIS_FF.\Q' using process `\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:350$279'.
+  created $dff cell `$procdff$1059' with positive edge clock.
+Creating register for signal `\DPR16X4C.\i' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$215_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$216_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$217_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$218_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$219_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$220_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$221_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$222_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$223_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$224_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$225_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$226_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$227_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$228_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:281$229_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:287$230_ADDR' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:285$231'.
+  created $dff cell `$procdff$1060' with positive edge clock.
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:287$230_DATA' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:285$231'.
+  created $dff cell `$procdff$1061' with positive edge clock.
+Creating register for signal `\DPR16X4C.$memwr$\ram$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:287$230_EN' using process `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:285$231'.
+  created $dff cell `$procdff$1062' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.\i' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$155_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$156_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$157_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$158_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$159_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$160_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$161_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$162_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$163_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$164_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$165_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$166_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$167_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$168_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$169_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:207$170_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:223$171_ADDR' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:221$173'.
+  created $dff cell `$procdff$1063' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:223$171_DATA' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:221$173'.
+  created $dff cell `$procdff$1064' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.$memwr$\mem$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:223$171_EN' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:221$173'.
+  created $dff cell `$procdff$1065' with positive edge clock.
+Creating register for signal `\TRELLIS_DPR16X4.\muxwre' using process `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:213$172'.
+  created direct connection (no actual register cell created).
+Creating register for signal `\Register.\out' using process `\Register.$proc$i2c.sv:489$54'.
+  created $adff cell `$procdff$1066' with positive edge clock and negative level reset.
+Creating register for signal `\PISO.\out' using process `\PISO.$proc$i2c.sv:458$52'.
+  created $adff cell `$procdff$1067' with positive edge clock and negative level reset.
+Creating register for signal `\PISO.\counter' using process `\PISO.$proc$i2c.sv:458$52'.
+  created $adff cell `$procdff$1068' with positive edge clock and negative level reset.
+Creating register for signal `\PISO.\register' using process `\PISO.$proc$i2c.sv:458$52'.
+  created $adff cell `$procdff$1069' with positive edge clock and negative level reset.
+Creating register for signal `\SIPO.\out' using process `\SIPO.$proc$i2c.sv:420$43'.
+  created $adff cell `$procdff$1070' with positive edge clock and negative level reset.
+Creating register for signal `\SIPO.\counter' using process `\SIPO.$proc$i2c.sv:420$43'.
+  created $adff cell `$procdff$1071' with positive edge clock and negative level reset.
+Creating register for signal `\I2C_slave.\state' using process `\I2C_slave.$proc$i2c.sv:396$40'.
+  created $adff cell `$procdff$1072' with positive edge clock and negative level reset.
+Creating register for signal `\I2C_slave.\scl_state' using process `\I2C_slave.$proc$i2c.sv:173$12'.
+  created $adff cell `$procdff$1073' with positive edge clock and negative level reset.
+Creating register for signal `\I2C_slave.\sda_state' using process `\I2C_slave.$proc$i2c.sv:173$12'.
+  created $adff cell `$procdff$1074' with positive edge clock and negative level reset.
+Creating register for signal `\I2C_slave.\start_state' using process `\I2C_slave.$proc$i2c.sv:173$12'.
+  created $adff cell `$procdff$1075' with positive edge clock and negative level reset.
+Creating register for signal `\I2C_slave.\stop_state' using process `\I2C_slave.$proc$i2c.sv:173$12'.
+  created $adff cell `$procdff$1076' with positive edge clock and negative level reset.
+
+2.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$280'.
+Found and cleaned up 2 empty switches in `\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:350$279'.
+Removing empty process `TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:350$279'.
+Removing empty process `DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$254'.
+Found and cleaned up 1 empty switch in `\DPR16X4C.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:285$231'.
+Removing empty process `TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$197'.
+Found and cleaned up 1 empty switch in `\TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:221$173'.
+Removing empty process `TRELLIS_DPR16X4.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:213$172'.
+Found and cleaned up 1 empty switch in `\Register.$proc$i2c.sv:489$54'.
+Removing empty process `Register.$proc$i2c.sv:489$54'.
+Found and cleaned up 2 empty switches in `\PISO.$proc$i2c.sv:458$52'.
+Removing empty process `PISO.$proc$i2c.sv:458$52'.
+Found and cleaned up 2 empty switches in `\SIPO.$proc$i2c.sv:420$43'.
+Removing empty process `SIPO.$proc$i2c.sv:420$43'.
+Removing empty process `I2C_slave.$proc$i2c.sv:396$40'.
+Found and cleaned up 20 empty switches in `\I2C_slave.$proc$i2c.sv:0$21'.
+Removing empty process `I2C_slave.$proc$i2c.sv:0$21'.
+Removing empty process `I2C_slave.$proc$i2c.sv:173$12'.
+Found and cleaned up 4 empty switches in `\I2C_slave.$proc$i2c.sv:0$9'.
+Removing empty process `I2C_slave.$proc$i2c.sv:0$9'.
+Found and cleaned up 4 empty switches in `\I2C_slave.$proc$i2c.sv:0$5'.
+Removing empty process `I2C_slave.$proc$i2c.sv:0$5'.
+Found and cleaned up 3 empty switches in `\I2C_slave.$proc$i2c.sv:0$3'.
+Removing empty process `I2C_slave.$proc$i2c.sv:0$3'.
+Found and cleaned up 3 empty switches in `\I2C_slave.$proc$i2c.sv:0$1'.
+Removing empty process `I2C_slave.$proc$i2c.sv:0$1'.
+Cleaned up 43 empty switches.
+
+2.4.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Register.
+Optimizing module PISO.
+Optimizing module SIPO.
+Optimizing module I2C_slave.
+<suppressed ~74 debug messages>
+Optimizing module ChipInterface.
+
+2.5. Executing FLATTEN pass (flatten design).
+Deleting now unused module Register.
+Deleting now unused module PISO.
+Deleting now unused module SIPO.
+Deleting now unused module I2C_slave.
+<suppressed ~4 debug messages>
+
+2.6. Executing TRIBUF pass.
+
+2.7. Executing DEMINOUT pass (demote inout ports to input or output).
+
+2.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 25 unused cells and 291 unused wires.
+<suppressed ~29 debug messages>
+
+2.10. Executing CHECK pass (checking for obvious problems).
+Checking module ChipInterface...
+Warning: multiple conflicting drivers for ChipInterface.\gp27:
+    port Y[0] of cell $flatten\dut.$procmux$877 ($pmux)
+    port Y[0] of cell $flatten\dut.$ternary$i2c.sv:220$15 ($mux)
+Warning: Wire ChipInterface.\gp25 is used but has no driver.
+Warning: Wire ChipInterface.\gp24 is used but has no driver.
+Warning: Wire ChipInterface.\dut.SCL is used but has no driver.
+Found and reported 4 problems.
+
+2.11. Executing OPT pass (performing simple optimizations).
+
+2.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+<suppressed ~216 debug messages>
+Removed a total of 72 cells.
+
+2.11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\dut.$procmux$383.
+    dead port 2/2 on $mux $flatten\dut.$procmux$391.
+    dead port 2/2 on $mux $flatten\dut.$procmux$399.
+    dead port 2/2 on $mux $flatten\dut.$procmux$407.
+    dead port 2/2 on $mux $flatten\dut.$procmux$416.
+    dead port 2/2 on $mux $flatten\dut.$procmux$425.
+    dead port 2/2 on $mux $flatten\dut.$procmux$434.
+    dead port 2/2 on $mux $flatten\dut.$procmux$443.
+    dead port 2/2 on $mux $flatten\dut.$procmux$453.
+    dead port 2/2 on $mux $flatten\dut.$procmux$463.
+    dead port 1/2 on $mux $flatten\dut.$procmux$475.
+    dead port 1/2 on $mux $flatten\dut.$procmux$478.
+    dead port 2/2 on $mux $flatten\dut.$procmux$480.
+    dead port 1/2 on $mux $flatten\dut.$procmux$492.
+    dead port 2/2 on $mux $flatten\dut.$procmux$494.
+    dead port 1/2 on $mux $flatten\dut.$procmux$506.
+    dead port 2/2 on $mux $flatten\dut.$procmux$508.
+    dead port 1/2 on $mux $flatten\dut.$procmux$520.
+    dead port 2/2 on $mux $flatten\dut.$procmux$522.
+    dead port 2/2 on $mux $flatten\dut.$procmux$533.
+    dead port 2/2 on $mux $flatten\dut.$procmux$544.
+    dead port 2/2 on $mux $flatten\dut.$procmux$555.
+    dead port 2/2 on $mux $flatten\dut.$procmux$566.
+    dead port 2/2 on $mux $flatten\dut.$procmux$578.
+    dead port 2/2 on $mux $flatten\dut.$procmux$590.
+    dead port 2/2 on $mux $flatten\dut.$procmux$603.
+    dead port 2/2 on $mux $flatten\dut.$procmux$616.
+    dead port 2/2 on $mux $flatten\dut.$procmux$629.
+    dead port 2/2 on $mux $flatten\dut.$procmux$643.
+    dead port 2/2 on $mux $flatten\dut.$procmux$657.
+    dead port 2/2 on $mux $flatten\dut.$procmux$672.
+    dead port 1/2 on $mux $flatten\dut.$procmux$689.
+    dead port 1/2 on $mux $flatten\dut.$procmux$692.
+    dead port 1/2 on $mux $flatten\dut.$procmux$695.
+    dead port 2/2 on $mux $flatten\dut.$procmux$697.
+    dead port 1/2 on $mux $flatten\dut.$procmux$714.
+    dead port 1/2 on $mux $flatten\dut.$procmux$717.
+    dead port 2/2 on $mux $flatten\dut.$procmux$719.
+    dead port 1/2 on $mux $flatten\dut.$procmux$736.
+    dead port 2/2 on $mux $flatten\dut.$procmux$738.
+    dead port 2/2 on $mux $flatten\dut.$procmux$754.
+    dead port 2/2 on $mux $flatten\dut.$procmux$770.
+    dead port 2/2 on $mux $flatten\dut.$procmux$787.
+    dead port 2/2 on $mux $flatten\dut.$procmux$804.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1003.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1013.
+    dead port 2/2 on $mux $flatten\dut.$procmux$1018.
+    dead port 1/2 on $mux $flatten\dut.$procmux$1024.
+    dead port 1/2 on $mux $flatten\dut.$procmux$1030.
+    dead port 1/2 on $mux $flatten\dut.$procmux$1036.
+    dead port 1/2 on $mux $flatten\dut.$procmux$334.
+    dead port 2/2 on $mux $flatten\dut.$procmux$336.
+    dead port 2/2 on $mux $flatten\dut.$procmux$342.
+    dead port 1/2 on $mux $flatten\dut.$procmux$350.
+    dead port 2/2 on $mux $flatten\dut.$procmux$352.
+    dead port 1/2 on $mux $flatten\dut.$procmux$360.
+    dead port 1/2 on $mux $flatten\dut.$procmux$885.
+    dead port 2/2 on $mux $flatten\dut.$procmux$887.
+    dead port 2/2 on $mux $flatten\dut.$procmux$892.
+    dead port 2/2 on $mux $flatten\dut.$procmux$897.
+    dead port 1/2 on $mux $flatten\dut.$procmux$903.
+    dead port 2/2 on $mux $flatten\dut.$procmux$362.
+    dead port 1/2 on $mux $flatten\dut.$procmux$915.
+    dead port 2/2 on $mux $flatten\dut.$procmux$917.
+    dead port 2/2 on $mux $flatten\dut.$procmux$922.
+    dead port 2/2 on $mux $flatten\dut.$procmux$927.
+    dead port 1/2 on $mux $flatten\dut.$procmux$933.
+    dead port 2/2 on $mux $flatten\dut.$procmux$944.
+    dead port 2/2 on $mux $flatten\dut.$procmux$949.
+    dead port 2/2 on $mux $flatten\dut.$procmux$954.
+    dead port 2/2 on $mux $flatten\dut.$procmux$959.
+    dead port 1/2 on $mux $flatten\dut.$procmux$965.
+    dead port 1/2 on $mux $flatten\dut.$procmux$971.
+    dead port 1/2 on $mux $flatten\dut.$procmux$977.
+    dead port 1/2 on $mux $flatten\dut.$procmux$983.
+    dead port 2/2 on $mux $flatten\dut.$procmux$369.
+    dead port 2/2 on $mux $flatten\dut.$procmux$376.
+Removed 77 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$871: $auto$opt_reduce.cc:134:opt_pmux$1078
+  Optimizing cells in module \ChipInterface.
+Performed a total of 1 changes.
+
+2.11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+<suppressed ~69 debug messages>
+Removed a total of 23 cells.
+
+2.11.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 170 unused wires.
+<suppressed ~1 debug messages>
+
+2.11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~32 debug messages>
+
+2.11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$1047: $auto$opt_reduce.cc:134:opt_pmux$1080
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$835: { $flatten\dut.$procmux$481_CMP $auto$opt_reduce.cc:134:opt_pmux$1084 $auto$opt_reduce.cc:134:opt_pmux$1082 }
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$843: { $auto$opt_reduce.cc:134:opt_pmux$1086 $flatten\dut.$procmux$353_CMP }
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$861: { $flatten\dut.$procmux$579_CMP $auto$opt_reduce.cc:134:opt_pmux$1088 }
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$877: { $auto$opt_reduce.cc:134:opt_pmux$1090 $flatten\dut.$procmux$353_CMP }
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$985: $auto$opt_reduce.cc:134:opt_pmux$1092
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$988: $auto$opt_reduce.cc:134:opt_pmux$1094
+  Optimizing cells in module \ChipInterface.
+Performed a total of 7 changes.
+
+2.11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+2.11.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~5 debug messages>
+
+2.11.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.11.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+2.11.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.11.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.11.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.11.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 5 unused wires.
+<suppressed ~1 debug messages>
+
+2.11.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.11.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.11.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+2.11.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.11.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.11.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.11.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.11.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.11.30. Finished OPT passes. (There is nothing left to do.)
+
+2.12. Executing FSM pass (extract and optimize FSM).
+
+2.12.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking ChipInterface.dut.state as FSM state register:
+    Circuit seems to be self-resetting.
+
+2.12.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.12.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.12.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.12.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.12.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.12.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.12.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.13. Executing OPT pass (performing simple optimizations).
+
+2.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+2.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.13.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\dut.\the_sipo.$procdff$1071 ($adff) from module ChipInterface (D = $flatten\dut.\the_sipo.$0\counter[3:0], Q = \dut.the_sipo.counter).
+Adding EN signal on $flatten\dut.\the_sipo.$procdff$1070 ($adff) from module ChipInterface (D = $flatten\dut.\the_sipo.$0\out[7:0], Q = \dut.the_sipo.out).
+Adding EN signal on $flatten\dut.\the_reg.$procdff$1066 ($adff) from module ChipInterface (D = \dut.the_sipo.out, Q = \dut.the_reg.out).
+Adding EN signal on $flatten\dut.\the_piso.$procdff$1069 ($adff) from module ChipInterface (D = $flatten\dut.\the_piso.$0\register[7:0], Q = \dut.the_piso.register).
+Adding EN signal on $flatten\dut.\the_piso.$procdff$1068 ($adff) from module ChipInterface (D = $flatten\dut.\the_piso.$0\counter[3:0], Q = \dut.the_piso.counter).
+Adding EN signal on $flatten\dut.\the_piso.$procdff$1067 ($adff) from module ChipInterface (D = $flatten\dut.\the_piso.$0\out[0:0], Q = \dut.the_piso.out).
+
+2.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 1 unused cells and 1 unused wires.
+<suppressed ~2 debug messages>
+
+2.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~5 debug messages>
+
+2.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+2.13.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.13.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.13.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.13.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.13.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.13.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.13.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.13.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.13.23. Finished OPT passes. (There is nothing left to do.)
+
+2.14. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port B of cell ChipInterface.$flatten\dut.\the_piso.$add$i2c.sv:456$51 ($add).
+Removed top 28 bits (of 32) from port Y of cell ChipInterface.$flatten\dut.\the_piso.$add$i2c.sv:456$51 ($add).
+Removed top 31 bits (of 32) from port B of cell ChipInterface.$flatten\dut.\the_sipo.$add$i2c.sv:432$47 ($add).
+Removed top 28 bits (of 32) from port Y of cell ChipInterface.$flatten\dut.\the_sipo.$add$i2c.sv:432$47 ($add).
+Removed top 3 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$785 ($mux).
+Removed top 3 bits (of 4) from port B of cell ChipInterface.$flatten\dut.$procmux$698_CMP0 ($eq).
+Removed top 1 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$686 ($mux).
+Removed top 2 bits (of 4) from port B of cell ChipInterface.$flatten\dut.$procmux$673_CMP0 ($eq).
+Removed top 2 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$670 ($mux).
+Removed top 2 bits (of 4) from port B of cell ChipInterface.$flatten\dut.$procmux$644_CMP0 ($eq).
+Removed top 1 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$641 ($mux).
+Removed top 1 bits (of 4) from port B of cell ChipInterface.$flatten\dut.$procmux$604_CMP0 ($eq).
+Removed top 3 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$601 ($mux).
+Removed top 1 bits (of 4) from port B of cell ChipInterface.$flatten\dut.$procmux$579_CMP0 ($eq).
+Removed top 2 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$576 ($mux).
+Removed top 1 bits (of 4) from port B of cell ChipInterface.$flatten\dut.$procmux$481_CMP0 ($eq).
+Removed top 1 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$472 ($mux).
+Removed top 1 bits (of 4) from port B of cell ChipInterface.$flatten\dut.$procmux$454_CMP0 ($eq).
+Removed top 3 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$414 ($mux).
+Removed top 2 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$389 ($mux).
+Removed top 3 bits (of 4) from mux cell ChipInterface.$flatten\dut.$procmux$347 ($mux).
+Removed top 2 bits (of 4) from wire ChipInterface.$flatten\dut.$10\nextstate[3:0].
+Removed top 1 bits (of 4) from wire ChipInterface.$flatten\dut.$13\nextstate[3:0].
+Removed top 3 bits (of 4) from wire ChipInterface.$flatten\dut.$15\nextstate[3:0].
+Removed top 2 bits (of 4) from wire ChipInterface.$flatten\dut.$16\nextstate[3:0].
+Removed top 3 bits (of 4) from wire ChipInterface.$flatten\dut.$18\nextstate[3:0].
+Removed top 3 bits (of 4) from wire ChipInterface.$flatten\dut.$2\nextstate[3:0].
+Removed top 1 bits (of 4) from wire ChipInterface.$flatten\dut.$6\nextstate[3:0].
+Removed top 2 bits (of 4) from wire ChipInterface.$flatten\dut.$7\nextstate[3:0].
+Removed top 1 bits (of 4) from wire ChipInterface.$flatten\dut.$8\nextstate[3:0].
+Removed top 3 bits (of 4) from wire ChipInterface.$flatten\dut.$9\nextstate[3:0].
+Removed top 28 bits (of 32) from wire ChipInterface.$flatten\dut.\the_sipo.$add$i2c.sv:432$47_Y.
+
+2.15. Executing PEEPOPT pass (run peephole optimizers).
+
+2.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 12 unused wires.
+<suppressed ~1 debug messages>
+
+2.17. Executing SHARE pass (SAT-based resource sharing).
+
+2.18. Executing TECHMAP pass (map to technology primitives).
+
+2.18.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+2.18.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~6 debug messages>
+
+2.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.20. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.21. Executing TECHMAP pass (map to technology primitives).
+
+2.21.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/mul2dsp.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/mul2dsp.v' to AST representation.
+Generating RTLIL representation for module `\_80_mul'.
+Generating RTLIL representation for module `\_90_soft_mul'.
+Successfully finished Verilog frontend.
+
+2.21.2. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/dsp_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/dsp_map.v' to AST representation.
+Generating RTLIL representation for module `\$__MUL18X18'.
+Successfully finished Verilog frontend.
+
+2.21.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+2.22. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module ChipInterface:
+  creating $macc model for $flatten\dut.\the_piso.$add$i2c.sv:456$51 ($add).
+  creating $macc model for $flatten\dut.\the_sipo.$add$i2c.sv:432$47 ($add).
+  creating $alu model for $macc $flatten\dut.\the_sipo.$add$i2c.sv:432$47.
+  creating $alu model for $macc $flatten\dut.\the_piso.$add$i2c.sv:456$51.
+  creating $alu cell for $flatten\dut.\the_piso.$add$i2c.sv:456$51: $auto$alumacc.cc:485:replace_alu$1123
+  creating $alu cell for $flatten\dut.\the_sipo.$add$i2c.sv:432$47: $auto$alumacc.cc:485:replace_alu$1126
+  created 2 $alu and 0 $macc cells.
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.23.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~28 debug messages>
+
+2.23.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.23.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+2.23.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.23.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.23.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.23.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~29 debug messages>
+
+2.23.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.23.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.23.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.23.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.23.16. Finished OPT passes. (There is nothing left to do.)
+
+2.24. Executing MEMORY pass.
+
+2.24.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.24.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.24.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.24.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.24.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.24.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.24.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.24.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.24.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.24.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.25. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.26. Executing MEMORY_LIBMAP pass (mapping memories to cells).
+
+2.27. Executing TECHMAP pass (map to technology primitives).
+
+2.27.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/lutrams_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/lutrams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__TRELLIS_DPR16X4_'.
+Successfully finished Verilog frontend.
+
+2.27.2. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/brams_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ECP5_DP16KD_'.
+Generating RTLIL representation for module `\$__ECP5_PDPW16KD_'.
+Successfully finished Verilog frontend.
+
+2.27.3. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~5 debug messages>
+
+2.28. Executing OPT pass (performing simple optimizations).
+
+2.28.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~38 debug messages>
+
+2.28.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.28.3. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 1-bit at position 0 on $flatten\dut.$procdff$1073 ($adff) from module ChipInterface.
+
+2.28.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 9 unused cells and 33 unused wires.
+<suppressed ~15 debug messages>
+
+2.28.5. Rerunning OPT passes. (Removed registers in this run.)
+
+2.28.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~28 debug messages>
+
+2.28.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.28.8. Executing OPT_DFF pass (perform DFF optimizations).
+Handling never-active EN on $auto$ff.cc:266:slice$1101 ($adffe) from module ChipInterface (removing D path).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1101 ($dlatch) from module ChipInterface.
+
+2.28.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 5 unused cells and 29 unused wires.
+<suppressed ~9 debug messages>
+
+2.28.10. Rerunning OPT passes. (Removed registers in this run.)
+
+2.28.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.28.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.28.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.28.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.28.15. Finished fast OPT passes.
+
+2.29. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.30. Executing OPT pass (performing simple optimizations).
+
+2.30.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.30.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.30.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+2.30.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+    Consolidated identical input bits for $mux cell $flatten\dut.$procmux$686:
+      Old ports: A=3'001, B=3'111, Y=$auto$wreduce.cc:461:run$1117 [2:0]
+      New ports: A=1'0, B=1'1, Y=$auto$wreduce.cc:461:run$1117 [1]
+      New connections: { $auto$wreduce.cc:461:run$1117 [2] $auto$wreduce.cc:461:run$1117 [0] } = { $auto$wreduce.cc:461:run$1117 [1] 1'1 }
+    Consolidated identical input bits for $mux cell $flatten\dut.$procmux$711:
+      Old ports: A={ 1'0 $auto$wreduce.cc:461:run$1117 [2:0] }, B=4'0011, Y=$flatten\dut.$5\nextstate[3:0]
+      New ports: A=$auto$wreduce.cc:461:run$1117 [2:0], B=3'011, Y=$flatten\dut.$5\nextstate[3:0] [2:0]
+      New connections: $flatten\dut.$5\nextstate[3:0] [3] = 1'0
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$807: { $flatten\dut.$procmux$698_CMP $flatten\dut.$procmux$673_CMP $flatten\dut.$procmux$644_CMP $flatten\dut.$procmux$604_CMP $flatten\dut.$procmux$579_CMP $flatten\dut.$procmux$481_CMP $flatten\dut.$procmux$454_CMP $flatten\dut.$procmux$417_CMP $flatten\dut.$procmux$392_CMP $flatten\dut.$procmux$353_CMP $flatten\dut.$procmux$337_CMP }
+    Consolidated identical input bits for $pmux cell $flatten\dut.$procmux$828:
+      Old ports: A=1'0, B=2'00, Y=\dut.sipo_clear
+      New connections: \dut.sipo_clear = 1'0
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$835: $auto$opt_reduce.cc:134:opt_pmux$1082
+    Consolidated identical input bits for $pmux cell $flatten\dut.$procmux$843:
+      Old ports: A=1'0, B=2'00, Y=\dut.the_piso.spit
+      New connections: \dut.the_piso.spit = 1'0
+    Consolidated identical input bits for $pmux cell $flatten\dut.$procmux$861:
+      Old ports: A=1'0, B=2'00, Y=\dut.the_sipo.load
+      New connections: \dut.the_sipo.load = 1'0
+    New ctrl vector for $pmux cell $flatten\dut.$procmux$877: $flatten\dut.$procmux$353_CMP
+  Optimizing cells in module \ChipInterface.
+    Consolidated identical input bits for $mux cell $flatten\dut.$procmux$711:
+      Old ports: A=$auto$wreduce.cc:461:run$1117 [2:0], B=3'011, Y=$flatten\dut.$5\nextstate[3:0] [2:0]
+      New ports: A={ $auto$wreduce.cc:461:run$1117 [1] $auto$wreduce.cc:461:run$1117 [1] }, B=2'01, Y=$flatten\dut.$5\nextstate[3:0] [2:1]
+      New connections: $flatten\dut.$5\nextstate[3:0] [0] = 1'1
+    Consolidated identical input bits for $mux cell $flatten\dut.$procmux$733:
+      Old ports: A=$flatten\dut.$5\nextstate[3:0], B=4'0010, Y=$flatten\dut.$3\nextstate[3:0]
+      New ports: A=$flatten\dut.$5\nextstate[3:0] [2:0], B=3'010, Y=$flatten\dut.$3\nextstate[3:0] [2:0]
+      New connections: $flatten\dut.$3\nextstate[3:0] [3] = 1'0
+  Optimizing cells in module \ChipInterface.
+Performed a total of 10 changes.
+
+2.30.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.30.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 4 unused cells and 4 unused wires.
+<suppressed ~5 debug messages>
+
+2.30.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~7 debug messages>
+
+2.30.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.30.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~7 debug messages>
+
+2.30.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.30.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.30.13. Executing OPT_DFF pass (perform DFF optimizations).
+Handling never-active EN on $auto$ff.cc:266:slice$1098 ($adffe) from module ChipInterface (removing D path).
+Handling never-active EN on $auto$ff.cc:266:slice$1095 ($adffe) from module ChipInterface (removing D path).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1095 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1095 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1095 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1095 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1098 ($dlatch) from module ChipInterface.
+
+2.30.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 3 unused cells and 10 unused wires.
+<suppressed ~4 debug messages>
+
+2.30.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~11 debug messages>
+
+2.30.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.30.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~7 debug messages>
+
+2.30.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.30.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.30.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+2.30.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.30.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.30.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~7 debug messages>
+
+2.30.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.30.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.30.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.30.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.30.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.30.30. Finished OPT passes. (There is nothing left to do.)
+
+2.31. Executing TECHMAP pass (map to technology primitives).
+
+2.31.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.31.2. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ecp5_alu'.
+Successfully finished Verilog frontend.
+
+2.31.3. Continuing TECHMAP pass.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$73c1c7322faaaa595331a8d8d336d7d573593385\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~295 debug messages>
+
+2.32. Executing OPT pass (performing simple optimizations).
+
+2.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~139 debug messages>
+
+2.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+<suppressed ~132 debug messages>
+Removed a total of 44 cells.
+
+2.32.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.32.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 18 unused cells and 130 unused wires.
+<suppressed ~19 debug messages>
+
+2.32.5. Finished fast OPT passes.
+
+2.33. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.34. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+2.35. Executing TECHMAP pass (map to technology primitives).
+
+2.35.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0N_'.
+Generating RTLIL representation for module `\$_DFFE_NP1N_'.
+Generating RTLIL representation for module `\$_DFFE_PP0N_'.
+Generating RTLIL representation for module `\$_DFFE_PP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `\$_ALDFF_NP_'.
+Generating RTLIL representation for module `\$_ALDFF_PP_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Successfully finished Verilog frontend.
+
+2.35.2. Continuing TECHMAP pass.
+Using template \$_DFF_PP0_ for cells of type $_DFF_PP0_.
+Using template \$_DFFE_PP0P_ for cells of type $_DFFE_PP0P_.
+Using template \$_DFFE_PP1P_ for cells of type $_DFFE_PP1P_.
+No more expansions possible.
+<suppressed ~81 debug messages>
+
+2.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+<suppressed ~7 debug messages>
+
+2.37. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+2.38. Executing LATTICE_GSR pass (implement FF init values).
+Handling GSR in ChipInterface.
+
+2.39. Executing ATTRMVCP pass (move or copy attributes).
+
+2.40. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+Removed 0 unused cells and 56 unused wires.
+<suppressed ~1 debug messages>
+
+2.41. Executing TECHMAP pass (map to technology primitives).
+
+2.41.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/latches_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+2.41.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+2.42. Executing ABC9 pass.
+
+2.42.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.42.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.42.3. Executing PROC pass (convert processes to netlists).
+
+2.42.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.42.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1851 in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Removed a total of 0 dead cases.
+
+2.42.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+2.42.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1852'.
+  Set init value: \Q = 1'0
+
+2.42.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \muxlsr in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1851'.
+
+2.42.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+2.42.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1852'.
+Creating decoders for process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1851'.
+     1/1: $0\Q[0:0]
+
+2.42.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.42.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.\Q' using process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1851'.
+  created $adff cell `$procdff$1855' with positive edge clock and positive level reset.
+
+2.42.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.42.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1852'.
+Found and cleaned up 1 empty switch in `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1851'.
+Removing empty process `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1851'.
+Cleaned up 1 empty switch.
+
+2.42.3.12. Executing OPT_EXPR pass (perform const folding).
+
+2.42.4. Executing PROC pass (convert processes to netlists).
+
+2.42.4.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.42.4.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1863 in module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
+Removed a total of 0 dead cases.
+
+2.42.4.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+2.42.4.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1864'.
+  Set init value: \Q = 1'1
+
+2.42.4.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \muxlsr in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1863'.
+
+2.42.4.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+2.42.4.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1864'.
+Creating decoders for process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1863'.
+     1/1: $0\Q[0:0]
+
+2.42.4.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.42.4.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.\Q' using process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1863'.
+  created $adff cell `$procdff$1867' with positive edge clock and positive level reset.
+
+2.42.4.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.42.4.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1864'.
+Found and cleaned up 1 empty switch in `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1863'.
+Removing empty process `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1863'.
+Cleaned up 1 empty switch.
+
+2.42.4.12. Executing OPT_EXPR pass (perform const folding).
+
+2.42.5. Executing PROC pass (convert processes to netlists).
+
+2.42.5.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.42.5.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1875 in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Removed a total of 0 dead cases.
+
+2.42.5.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+2.42.5.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1876'.
+  Set init value: \Q = 1'0
+
+2.42.5.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \muxlsr in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1875'.
+
+2.42.5.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+2.42.5.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1876'.
+Creating decoders for process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1875'.
+     1/1: $0\Q[0:0]
+
+2.42.5.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.42.5.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.\Q' using process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1875'.
+  created $adff cell `$procdff$1879' with positive edge clock and positive level reset.
+
+2.42.5.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.42.5.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:0$1876'.
+Found and cleaned up 1 empty switch in `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1875'.
+Removing empty process `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.$proc$/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:344$1875'.
+Cleaned up 1 empty switch.
+
+2.42.5.12. Executing OPT_EXPR pass (perform const folding).
+
+2.42.6. Executing SCC pass (detecting logic loops).
+Found 0 SCCs in module ChipInterface.
+Found 0 SCCs.
+
+2.42.7. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.42.8. Executing PROC pass (convert processes to netlists).
+
+2.42.8.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.42.8.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.42.8.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.42.8.4. Executing PROC_INIT pass (extract init attributes).
+
+2.42.8.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.42.8.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.42.8.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.42.8.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.42.8.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.42.8.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.42.8.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.42.8.12. Executing OPT_EXPR pass (perform const folding).
+
+2.42.9. Executing TECHMAP pass (map to technology primitives).
+
+2.42.9.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.42.9.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~165 debug messages>
+
+2.42.10. Executing OPT pass (performing simple optimizations).
+
+2.42.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Optimizing module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
+Optimizing module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+
+2.42.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding identical cells in module `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF'.
+Finding identical cells in module `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Removed a total of 0 cells.
+
+2.42.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.42.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+  Optimizing cells in module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
+  Optimizing cells in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Performed a total of 0 changes.
+
+2.42.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF'.
+Finding identical cells in module `$paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF'.
+Finding identical cells in module `$paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF'.
+Removed a total of 0 cells.
+
+2.42.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.42.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF..
+Finding unused cells or wires in module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF..
+Finding unused cells or wires in module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF..
+
+2.42.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Optimizing module $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Optimizing module $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
+
+2.42.10.9. Finished OPT passes. (There is nothing left to do.)
+
+2.42.11. Executing TECHMAP pass (map to technology primitives).
+
+2.42.11.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/abc9_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/abc9_map.v' to AST representation.
+Successfully finished Verilog frontend.
+
+2.42.11.2. Continuing TECHMAP pass.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Using template $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF for cells of type $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Using template $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF for cells of type $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
+No more expansions possible.
+<suppressed ~15 debug messages>
+
+2.42.12. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/abc9_model.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/abc9_model.v' to AST representation.
+Generating RTLIL representation for module `$__ABC9_DELAY'.
+Generating RTLIL representation for module `$__ABC9_SCC_BREAKER'.
+Generating RTLIL representation for module `$__DFF_N__$abc9_flop'.
+Generating RTLIL representation for module `$__DFF_P__$abc9_flop'.
+Successfully finished Verilog frontend.
+
+2.42.13. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+2.42.14. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.42.15. Executing ABC9_OPS pass (helper functions for ABC9).
+<suppressed ~2 debug messages>
+
+2.42.16. Executing TECHMAP pass (map to technology primitives).
+
+2.42.16.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.42.16.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~169 debug messages>
+
+2.42.17. Executing OPT pass (performing simple optimizations).
+
+2.42.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.42.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.42.17.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ChipInterface..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.42.17.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ChipInterface.
+Performed a total of 0 changes.
+
+2.42.17.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ChipInterface'.
+Removed a total of 0 cells.
+
+2.42.17.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.42.17.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ChipInterface..
+
+2.42.17.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ChipInterface.
+
+2.42.17.9. Finished OPT passes. (There is nothing left to do.)
+
+2.42.18. Executing AIGMAP pass (map logic to AIG).
+
+2.42.19. Executing AIGMAP pass (map logic to AIG).
+Module ChipInterface: replaced 54 cells with 258 new cells, skipped 53 cells.
+  replaced 3 cell types:
+      40 $_OR_
+       3 $_XOR_
+      11 $_MUX_
+  not replaced 8 cell types:
+      29 $_NOT_
+       4 $_AND_
+       4 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF
+       1 $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp
+       5 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF
+       4 $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp
+       1 $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF
+       5 $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp
+
+2.42.19.1. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.42.19.2. Executing ABC9_OPS pass (helper functions for ABC9).
+
+2.42.19.3. Executing XAIGER backend.
+<suppressed ~11 debug messages>
+Extracted 86 AND gates and 338 wires from module `ChipInterface' to a netlist network with 22 inputs and 33 outputs.
+
+2.42.19.4. Executing ABC9_EXE pass (technology mapping using ABC9).
+
+2.42.19.5. Executing ABC9.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_lut <abc-temp-dir>/input.lut 
+ABC: + read_box <abc-temp-dir>/input.box 
+ABC: + &read <abc-temp-dir>/input.xaig 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      60  lev =    9 (1.66)  mem = 0.00 MB  box = 10  bb = 10
+ABC: + &scorr 
+ABC: Warning: The network is combinational.
+ABC: + &sweep 
+ABC: + &dc2 
+ABC: + &dch -f 
+ABC: + &ps 
+ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      39  lev =    6 (0.91)  mem = 0.00 MB  ch =    2  box = 10  bb = 10
+ABC: + &if -W 300 -v 
+ABC: K = 7. Memory (bytes): Truth =    0. Cut =   60. Obj =  140. Set =  636. CutMin = no
+ABC: Node =      39.  Ch =     2.  Total mem =    0.02 MB. Peak cut mem =    0.00 MB.
+ABC: P:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      304.  T =     0.00 sec
+ABC: P:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      304.  T =     0.00 sec
+ABC: P:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      316.  T =     0.00 sec
+ABC: F:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      223.  T =     0.00 sec
+ABC: A:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      223.  T =     0.00 sec
+ABC: A:  Del = 1127.00.  Ar =      40.0.  Edge =       65.  Cut =      223.  T =     0.00 sec
+ABC: Total time =     0.00 sec
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + &mfs 
+ABC: The network is not changed by "&mfs".
+ABC: + &ps -l 
+ABC: <abc-temp-dir>/input : i/o =     22/     33  and =      78  lev =    6 (0.91)  mem = 0.00 MB  box = 10  bb = 10
+ABC: Mapping (K=7)  :  lut =     14  edge =      65  lev =    2 (0.32)  levB =    3  mem = 0.00 MB
+ABC: LUT = 14 : 2=2 14.3 %  3=2 14.3 %  4=2 14.3 %  5=3 21.4 %  6=3 21.4 %  7=2 14.3 %  Ave = 4.64
+ABC: + &write -n <abc-temp-dir>/output.aig 
+ABC: + time 
+ABC: elapse: 0.02 seconds, total: 0.02 seconds
+
+2.42.19.6. Executing AIGER frontend.
+<suppressed ~122 debug messages>
+Removed 111 unused cells and 182 unused wires.
+
+2.42.19.7. Executing ABC9_OPS pass (helper functions for ABC9).
+ABC RESULTS:              $lut cells:       15
+ABC RESULTS:   $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp cells:        1
+ABC RESULTS:   $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp cells:        4
+ABC RESULTS:   $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp cells:        5
+ABC RESULTS:           input signals:       22
+ABC RESULTS:          output signals:       20
+Removing temp directory.
+
+2.42.20. Executing TECHMAP pass (map to technology primitives).
+
+2.42.20.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/abc9_unmap.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/abc9_unmap.v' to AST representation.
+Generating RTLIL representation for module `\$__DFF_x__$abc9_flop'.
+Generating RTLIL representation for module `\$__ABC9_SCC_BREAKER'.
+Successfully finished Verilog frontend.
+
+2.42.20.2. Continuing TECHMAP pass.
+Using template $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF for cells of type $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF.
+Using template $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp for cells of type $paramod$b50ed6cf3f2b5c0e07657602cb4455d90f2562f9\TRELLIS_FF_$abc9_byp.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF.
+Using template $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF for cells of type $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF.
+Using template $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp for cells of type $paramod$37e41664cab9052a9b41c89036e0524f666a0fee\TRELLIS_FF_$abc9_byp.
+Using template $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp for cells of type $paramod$68581f66a8fa831820fa7633bd24ba569ae9d7e3\TRELLIS_FF_$abc9_byp.
+No more expansions possible.
+<suppressed ~31 debug messages>
+Removed 2 unused cells and 570 unused wires.
+
+2.43. Executing TECHMAP pass (map to technology primitives).
+
+2.43.1. Executing Verilog-2005 frontend: /home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v
+Parsing Verilog input from `/home/user/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NN_'.
+Generating RTLIL representation for module `\$_DFFE_PN_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_DFFE_NP0N_'.
+Generating RTLIL representation for module `\$_DFFE_NP1N_'.
+Generating RTLIL representation for module `\$_DFFE_PP0N_'.
+Generating RTLIL representation for module `\$_DFFE_PP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFFE_NP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_NP1N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP0N_'.
+Generating RTLIL representation for module `\$_SDFFE_PP1N_'.
+Generating RTLIL representation for module `\$_ALDFF_NP_'.
+Generating RTLIL representation for module `\$_ALDFF_PP_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_NPP_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPN_'.
+Generating RTLIL representation for module `\$_ALDFFE_PPP_'.
+Generating RTLIL representation for module `\FD1P3AX'.
+Generating RTLIL representation for module `\FD1P3AY'.
+Generating RTLIL representation for module `\FD1P3BX'.
+Generating RTLIL representation for module `\FD1P3DX'.
+Generating RTLIL representation for module `\FD1P3IX'.
+Generating RTLIL representation for module `\FD1P3JX'.
+Generating RTLIL representation for module `\FD1S3AX'.
+Generating RTLIL representation for module `\FD1S3AY'.
+Generating RTLIL representation for module `\FD1S3BX'.
+Generating RTLIL representation for module `\FD1S3DX'.
+Generating RTLIL representation for module `\FD1S3IX'.
+Generating RTLIL representation for module `\FD1S3JX'.
+Generating RTLIL representation for module `\IFS1P3BX'.
+Generating RTLIL representation for module `\IFS1P3DX'.
+Generating RTLIL representation for module `\IFS1P3IX'.
+Generating RTLIL representation for module `\IFS1P3JX'.
+Generating RTLIL representation for module `\OFS1P3BX'.
+Generating RTLIL representation for module `\OFS1P3DX'.
+Generating RTLIL representation for module `\OFS1P3IX'.
+Generating RTLIL representation for module `\OFS1P3JX'.
+Generating RTLIL representation for module `\IB'.
+Generating RTLIL representation for module `\IBPU'.
+Generating RTLIL representation for module `\IBPD'.
+Generating RTLIL representation for module `\OB'.
+Generating RTLIL representation for module `\OBZ'.
+Generating RTLIL representation for module `\OBZPU'.
+Generating RTLIL representation for module `\OBZPD'.
+Generating RTLIL representation for module `\OBCO'.
+Generating RTLIL representation for module `\BB'.
+Generating RTLIL representation for module `\BBPU'.
+Generating RTLIL representation for module `\BBPD'.
+Generating RTLIL representation for module `\ILVDS'.
+Generating RTLIL representation for module `\OLVDS'.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+2.43.2. Continuing TECHMAP pass.
+Using template $paramod$3a57d0c4ff69f489976b0c62760252ae44e7bcc8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01101010 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+Using template $paramod$677846851fbd103e137bc2ae48c37c939028462b\$lut for cells of type $lut.
+Using template $paramod$9cc51547ab44a72dd506ee5bb84a864365a103da\$lut for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
+Using template $paramod$0f0af839563878d96ba67b9172d2c715d44a961a\$lut for cells of type $lut.
+Using template $paramod$0198e7a74ccc27dfa24c1e29733af266428fa3fd\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01001100 for cells of type $lut.
+Using template $paramod$346f22d75483af549a933464c55661d9b06fa7af\$lut for cells of type $lut.
+Using template $paramod$5f032cf4528890c6fc778db8fba9eab402a6b3eb\$lut for cells of type $lut.
+Using template $paramod$eea9db1a8b89e05cfd951a1e8aba4ebecbc63a75\$lut for cells of type $lut.
+Using template $paramod$6e595813a154d9d18c20a4032996fe374e18154d\$lut for cells of type $lut.
+No more expansions possible.
+<suppressed ~282 debug messages>
+
+2.44. Executing OPT_LUT_INS pass (discard unused LUT inputs).
+Optimizing LUTs in ChipInterface.
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
+  Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 2)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 2)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 3)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 0)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut2 (4 -> 0)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut3 (4 -> 0)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut4 (4 -> 0)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut5 (4 -> 0)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut6 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\counter[3:0][0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 1)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\register[7:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+  Optimizing lut $abc$2575$lut$flatten\dut.\the_piso.$0\out[0:0].genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut1 (4 -> 1)
+  Optimizing lut $abc$2575$lut\dut.piso_load.genblk1.genblk1.genblk1.genblk1.genblk1.genblk1.lut0 (4 -> 0)
+Removed 0 unused cells and 39 unused wires.
+
+2.45. Executing AUTONAME pass.
+Renamed 486 objects in module ChipInterface (21 iterations).
+<suppressed ~136 debug messages>
+
+2.46. Executing HIERARCHY pass (managing design hierarchy).
+
+2.46.1. Analyzing design hierarchy..
+Top module:  \ChipInterface
+
+2.46.2. Analyzing design hierarchy..
+Top module:  \ChipInterface
+Removed 0 unused modules.
+
+2.47. Printing statistics.
+
+=== ChipInterface ===
+
+   Number of wires:                126
+   Number of wire bits:            227
+   Number of public wires:         126
+   Number of public wire bits:     227
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 77
+     L6MUX21                         9
+     LUT4                           41
+     PFUMX                          17
+     TRELLIS_FF                     10
+
+2.48. Executing CHECK pass (checking for obvious problems).
+Checking module ChipInterface...
+Found and reported 0 problems.
+
+2.49. Executing JSON backend.
+
+Warnings: 4 unique messages, 4 total
+End of script. Logfile hash: e2a91447c4, CPU: user 1.28s system 0.09s, MEM: 30.56 MB peak
+Yosys 0.36+3 (git sha1 a53032104, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 36% 21x read_verilog (0 sec), 11% 35x opt_expr (0 sec), ...
